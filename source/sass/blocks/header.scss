@@ -1,0 +1,283 @@
+
+
+.header {
+  font-family: "Poppins Medium";
+  color: $font-color;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  padding-top: 43px;
+  padding-bottom: 18px;
+
+   ::after {
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 1px;
+     top: 115px;
+     left: 0;
+     background-color: red;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.header__buttons {
+  display: none;
+}
+
+.header__button-cart {
+  display: none;
+}
+
+.header__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+}
+
+.header__navigation-search input{
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    font-family: "Poppins Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $grey;
+  }
+}
+
+.header__user-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  order: 2;
+  position: absolute;
+  right: 0;
+
+  a {
+    @include link-reset;
+
+    &:hover {
+      color: $gold-color;
+    }
+  }
+}
+
+.header__user-item {
+
+  &--about,
+  &--stores,
+  &--contact {
+    display: none;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 36px;
+  }
+}
+
+.header__navigation-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  left: 35%;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Poppins Medium";
+  margin-top: 91px;
+  transform: translateX(-50%);
+  max-width: 78%;
+  width: fit-content;
+}
+
+.header__navigation-item {
+  a {
+    @include link-reset;
+    color: $font-color;
+
+    &:hover {
+      color: $gold-color;
+    }
+  }
+}
+
+.header__navigation-item:not(:last-of-type) {
+  margin-right: 35px;
+}
+
+.header__button {
+  @include button-reset;
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    padding: 52px 0;
+    min-height: 126px;
+
+    ::after {
+      display: none;
+    }
+  }
+
+  .header__opened svg {
+    stroke: white;
+  }
+
+  .header__closed .header__navigation-search input,
+  .header__closed .header__navigation-search label{
+    display: none;
+  }
+
+  .header__opened .header__navigation {
+    flex-direction: column;
+  }
+
+  .header__opened .header__navigation-search input {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 21px;
+    border: none;
+    background-color: rgba($basic-white, 0.15);
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  .header__opened .header__navigation-list {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    position: relative;
+    left: unset;
+    right: unset;
+    transform: unset;
+    margin-top: 55px;
+
+    li:not(:last-of-type) {
+      margin-bottom: 27px;
+    }
+
+    a {
+      color: $basic-white;
+    }
+  }
+
+  .header__opened .header__user-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    position: relative;
+    left: unset;
+    right: unset;
+    transform: unset;
+    margin-top: 50px;
+
+    li:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    li:nth-child(3) {
+      margin-bottom: 40px;
+    }
+
+    a {
+      color: rgba($basic-white, 0.75);
+    }
+  }
+
+  .header__opened .header__user-item {
+    &--about,
+    &--stores,
+    &--contact {
+      display: block;
+    }
+
+    &--cart {
+      display: none;
+    }
+  }
+
+
+  .header__opened .header__navigation-search svg {
+    fill: white;
+  }
+
+  .header__opened .header__navigation {
+      position: relative;
+      padding: 40px 0;
+  }
+
+  .header__opened .header__navigation-search label {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 9%;
+    left: 12px;
+  }
+
+  .header__user-list {
+    display: none;
+  }
+
+  .header__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__button svg {
+    fill: transparent;
+    stroke: white;
+  }
+
+  .header__opened {
+    height: 100vh;
+  }
+
+  .header__opened,
+  .header--no-js {
+    background-color: $gold-color;
+  }
+
+  .header__navigation-list {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header__closed {
+    max-height: 92px;
+    padding: 38px 0;
+  }
+
+  .header__logo svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .header__opened {
+    height: 100vh;
+  }
+}
+
+
