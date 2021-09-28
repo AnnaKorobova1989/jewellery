@@ -23,21 +23,22 @@
 
 </head>
 <body class="page__body">
+  <div class="wrapper">
   <header class="header header__closed header--no-js">
     <div class="container">
         <a class="header__logo">
-          <svg width="66" height="66">
+          <svg width="66" height="66" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#logo"></use>
           </svg>
         </a>
         <div class="header__buttons">
           <button type="button" class="header__button header__button--burger">
-            <svg width="25" height="16">
+            <svg width="25" height="16" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite.svg#burger-black"></use>
             </svg>
           </button>
           <button type="button" class="header__button header__button--cart">
-            <svg width="18" height="16">
+            <svg width="18" height="16" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite.svg#cart"></use>
             </svg>
           </button>
@@ -46,7 +47,7 @@
           <form method="POST">
             <div class="header__navigation-search">
               <label for="search">
-                <svg width="14" height="14">
+                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg>
               </label>
@@ -90,6 +91,107 @@
         </nav>
     </div>
   </header>
+
+  <main class="main">
+    <section class="main-picture">
+      <div class="main-picture__box">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/backgrounds/bg-mobile.webp 1x, img/backgrounds/bg-mobile@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/backgrounds/bg-mobile.jpg 1x, img/backgrounds/bg-mobile@2x.jpg 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/backgrounds/bg-tablet.webp 1x, img/backgrounds/bg-tablet@2xwebp 2x">
+          <source media="(max-width: 1023px)" srcset="img/backgrounds/bg-tablet.jpg 1x, img/backgrounds/bg-tablet@2x.jpg 2x">
+          <source type="image/webp" srcset="img/backgrounds/bg-desktop.webp 1x, img/backgrounds/bg-desktop@2x 2x">
+          <img src="img/backgrounds/bg-desktop.jpg" srcset="img/backgrounds/bg-desktop@2x.jpg 2x" width="1366" height="463" alt="Печатные платы">
+        </picture>
+        <div class="main-picture__title">
+          <h1>Perfection</h1>
+          <p>made to be yours</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__subscription">
+        <h2>The good stuff in your inbox</h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <form method="POST">
+          <div class="footer__subscribtion-form">
+            <div class="footer__subscription-email">
+              <input id="your-email" type="text" placeholder="Your E-mail">
+              <label for="your-email"></label>
+            </div>
+            <button class="footer__button-signup" type="submit">
+              <svg width="14" height="14">
+                <use xlink:href="img/sprite.svg#right-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+      <ul class="footer__info-list">
+        <li class="footer__info-item">
+          <a href="#">Ordering & Payment</a>
+        </li>
+        <li class="footer__info-item">
+          <a href="#">Terms & Conditions</a>
+        </li>
+        <li class="footer__info-item">
+          <a href="#">Returns & Exchanges</a>
+        </li>
+        <li class="footer__info-item">
+          <a href="#">Delivery</a>
+        </li>
+        <li class="footer__info-item">
+          <a href="#">About CH</a>
+        </li>
+        <li class="footer__info-item">
+          <a href="#">Stores & Hours</a>
+        </li>
+        <li class="footer__info-item">
+          <a href="#">Jobs</a>
+        </li>
+        <li class="footer__info-item">
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+      <ul class="footer__social-list">
+        <li class="footer__social-item footer__social-item--facebook">
+          <a href="#">
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
+            <span>Facebook</span>
+          </a>
+        </li>
+        <li class="footer__social-item footer__social-item--instagram">
+          <a href="#">
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li class="footer__social-item footer__social-item--pinterest">
+          <a href="#">
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#pinterest"></use>
+            </svg>
+            <span>Pinterest</span>
+          </a>
+        </li>
+        <li class="footer__social-item footer__social-item--twitter">
+          <a href="#">
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
+            <span>Twittwer</span>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  </div>
   <script src="js/script.js"></script>
 </body>
 </html>

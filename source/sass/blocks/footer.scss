@@ -1,0 +1,170 @@
+.footer {
+  background-color: $total-black;
+
+  h2 {
+    color: $basic-white;
+    font-family: "Cormorant Bold";
+    font-size: 34px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-family: "Poppins Medium";
+    font-size: 16px;
+    line-height: 130%;
+    color: $grey;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.footer__subscribtion-form {
+  position: relative;
+}
+
+.footer__subscription {
+  width: 43.5%;
+}
+
+.footer__subscription-email {
+
+  input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid $basic-white;
+  }
+
+  &::placeholder {
+    font-family: "Poppins Medium";
+    font-size: 16px;
+    line-height: 130%;
+    color: $grey;
+  }
+}
+
+.footer__button-signup {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  width: 29px;
+  height: 9px;
+  top: 0;
+  right: 0;
+
+  svg {
+    stroke: $basic-white;
+  }
+}
+
+.footer__info-list {
+  @include list-reset;
+  column-count: 2;
+  column-gap: 70px;
+  width: 31,4%;
+
+  li:not(:last-of-type) {
+    margin-bottom: 28px;
+  }
+
+  a {
+    @include link-reset;
+    font-family: "Poppins Medium";
+    font-weight: 500;
+    font-size: 16px;
+    color: $basic-white;
+    line-height: 130%;
+
+    &:hover {
+      color: $gold-color;
+    }
+  }
+}
+
+.footer__social-list {
+  @include list-reset;
+  width: 10%;
+
+  li:not(:last-of-type) {
+    margin-bottom: 28px;
+  }
+
+  a {
+    @include link-reset;
+    font-family: "Poppins Medium";
+    font-weight: 500;
+    font-size: 16px;
+    color: $basic-white;
+    line-height: 130%;
+
+    &:hover {
+      color: $gold-color;
+    }
+  }
+}
+
+.footer__container {
+  margin-top: 91px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: $tablet-width) {
+  .footer__container {
+    width: 85.4%;
+    padding: 0;
+  }
+
+  .footer__subscribtion-form {
+    width: 92%;
+  }
+
+  .footer__subscription {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .footer__info-list {
+    width: 56%;
+  }
+
+  .footer__social-list {
+    width: 20%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer__subscription {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .footer__info-list {
+    column-count: 1;
+    margin-bottom: 40px;
+  }
+
+  .footer__info-list {
+    width: 100%;
+  }
+
+  .footer__social-list {
+    width: 100%;
+    display: flex;
+
+    li:not(:last-of-type) {
+      margin-right: 30px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

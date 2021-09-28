@@ -1,0 +1,58 @@
+.main-picture__box {
+  position: relative;
+}
+
+.main-picture__title {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 150px;
+
+  @media (max-width: $tablet-width) {
+    left: 0;
+    top: 0;
+  }
+
+
+  h1 {
+    font-family: "Cormorant Bold";
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: $basic-white;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $mobile-width) {
+      font-size: 38px;
+    }
+  }
+
+  p {
+    font-family: "Cormorant Italic";
+    font-size: 38px;
+    line-height: 130%;
+    color: $basic-white;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $mobile-width) {
+      font-size: 34px;
+    }
+  }
+}
+
+.main-picture img {
+  width: 100%;
+  height: auto;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    max-height: 463px;
+  }
+}
