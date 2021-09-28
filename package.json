@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "del": "^4.1.1",
-    "svgstore": "^3.0.0-2"
+    "svgstore": "^3.0.0-2",
+    "swiper": "^7.0.6"
   }
 }

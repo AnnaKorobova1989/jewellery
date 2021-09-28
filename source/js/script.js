@@ -1,5 +1,5 @@
 'use strict';
-
+//Menu
 const header = document.querySelector('.header');
 const headerBurger = document.querySelector('.header__button--burger');
 
@@ -14,3 +14,22 @@ headerBurger.addEventListener('click', function () {
     header.classList.add('header__closed');
   }
 })
+
+//Slider
+
+const swiper = new Swiper('.swiper', {
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+    clickable: true,
+  },
+  slideToClickedSlide: true,
+  slidesPerView: 4,
+});
+
+
+

@@ -247,7 +247,11 @@
 
   .header__button svg {
     fill: transparent;
-    stroke: white;
+    stroke: $total-black;
+  }
+
+  .header__opened .header__button svg {
+    stroke: $basic-white;
   }
 
   .header__opened {
