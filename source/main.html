@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Jewellery</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/cormorant-garamond-bold.woff" as="font">
   <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font">
@@ -111,192 +110,269 @@
       </div>
     </section>
     <section class="main__swiper swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
+      <h2 class="swiper__title">New In</h2>
+      <a class="swiper__link link">Shop Now</a>
+      <div class="swiper-container mySwiper">
+        <div class="swiper-button-prev">
+          <svg width="30" height="11" viewBox="0 0 30 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+            focusable="false">
+            <use xlink:href="img/sprite.svg#left-arrow"></use>
+          </svg>
         </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
+        <div class="swiper-button-next">
+          <svg width="30" height="11" viewBox="0 0 30 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+            focusable="false">
+            <use xlink:href="img/sprite.svg#right-arrow"></use>
+          </svg>
         </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/items/item01.webp 1x, img/item/item01@2x.webp 2x" type="image/webp">
+                  <img src="img/items/item01.jpg" srcset="img/items/item01@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Necklace with amethyst</h3>
+                <p>&#36; 145</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/items/item02.webp 1x, img/item/item02@2x.webp 2x" type="image/webp">
+                  <img src="img/items/item02.jpg" srcset="img/items/item02@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Layered сhoker</h3>
+                <p>&#36; 115</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/items/item03.webp 1x, img/item/item03@2x.webp 2x" type="image/webp">
+                  <img src="img/items/item03.jpg" srcset="img/items/item03@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Gold chain</h3>
+                <p>&#36; 215</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/items/item04.webp 1x, img/item/item04@2x.webp 2x" type="image/webp">
+                  <img src="img/items/item04.jpg" srcset="img/items/item04@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Galaxy earrings</h3>
+                <p>&#36; 95</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="product.html">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/catalog/product01.webp 1x, img/catalog/product01@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/product01.jpg" srcset="img/catalog/product01@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Gold necklace</h3>
+                <p>&#36; 115</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/catalog/product02.webp 1x, img/catalog/product02@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/product02.jpg" srcset="img/catalog/product02@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Choker with gold bead</h3>
+                <p>&#36; 55</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/catalog/product03.webp 1x, img/catalog/product03@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/product03.jpg" srcset="img/catalog/product03@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Gold layered necklace</h3>
+                <p>&#36; 155</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/catalog/product04.webp 1x, img/catalog/product04@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/product04.jpg" srcset="img/catalog/product04@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Blue gemstone pendant</h3>
+                <p>&#36; 105</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/catalog/product05.webp 1x, img/catalog/product05@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/product05.jpg" srcset="img/catalog/product05@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Boho earrings</h3>
+                <p>&#36; 75</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/catalog/product06.webp 1x, img/catalog/product06@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/product06.jpg" srcset="img/catalog/product06@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Gold bird necklace</h3>
+                <p>&#36; 135</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/catalog/product07.webp 1x, img/catalog/product07@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/product07.jpg" srcset="img/catalog/product07@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Black leather choker</h3>
+                <p>&#36; 85</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="swiper-slide__link card-link" href="#">
+              <div class="swiper-slide__img-box card-link__img">
+                <picture>
+                  <source srcset="img/catalog/product09.webp 1x, img/catalog/product09@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/product09.jpg" srcset="img/catalog/product09@2x.jpg 2x" width="270" height="284" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide__description card-link__text">
+                <h3>Elephant earrings</h3>
+                <p>&#36; 95</p>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a class="swiper-slide__link" href="#">
-            <div class="swiper-slide__image-box">
-              <picture>
-                <img src="img/items/item01.jpg" alt="">
-              </picture>
-            </div>
-            <div class="swiper-slide__description">
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </div>
-          </a>
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev">
-          <img src="img/left-arrow.svg" alt="">
-      </div>
-      <div class="swiper-button-next">
-          <img src="img/right-arrow.svg" alt="">
-      </div>
-
     </section>
     <section class="main__blog blog">
       <div class="container">
         <h2 class="blog__title">Blog</h2>
         <a class="blog__link" href="#">Read All</a>
+        <ul class="blog__list">
+          <li class="blog__item">
+            <div class="blog__item-picture">
+              <img src="img/blog/blog-picture-desktop01.jpg" alt="">
+            </div>
+            <div class="blog__item-description">
+              <p>September 30, 2019</p>
+              <h3>How to care for your jewellery</h3>
+              <a href="#">Read Article</a>
+            </div>
+          </li>
+          <li class="blog__item">
+            <div class="blog__item-picture">
+              <img src="img/blog/blog-picture-desktop02.jpg" alt="">
+            </div>
+            <div class="blog__item-description">
+              <p>September 23, 2019</p>
+              <h3>Power of crystals</h3>
+              <a href="#">Read Article</a>
+            </div>
+          </li>
+          <li class="blog__item">
+            <div class="blog__item-picture">
+              <img src="img/blog/blog-picture-desktop03.jpg" alt="">
+            </div>
+            <div class="blog__item-description">
+              <p>September 16, 2019</p>
+              <h3>AW 19 trends</h3>
+              <a href="#">Read Article</a>
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul class="blog__list">
-        <li class="blog__item">
-          <div class="blog__item-picture">
-
-          </div>
-        </li>
-        <li class="blog__item"></li>
-        <li class="blog__item"></li>
-      </ul>
+    </section>
+    <section class="faq">
+      <div class="container">
+        <ul class="faq__list">
+          <li class="faq__item accordion-item">
+            <div class="faq__item-title accordion-item-title">
+              <h3>What materials are the jewellery made of?</h3>
+            </div>
+            <div class="faq__item-body accordion-item-content">
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </div>
+          </li>
+          <li class="faq__item accordion-item">
+            <div class="faq__item-title accordion-item-title">
+              <h3>Which countries do you deliver to?</h3>
+            </div>
+            <div class="faq__item-body accordion-item-content">
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </div>
+          </li>
+          <li class="faq__item accordion-item">
+            <div class="faq__item-title accordion-item-title">
+              <h3>What are the payment methods?</h3>
+            </div>
+            <div class="faq__item-body accordion-item-content">
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </div>
+          </li>
+          <li class="faq__item accordion-item">
+            <div class="faq__item-title accordion-item-title">
+              <h3>Can I return the jewellery if it didn’t fit me?</h3>
+            </div>
+            <div class="faq__item-body accordion-item-content">
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 

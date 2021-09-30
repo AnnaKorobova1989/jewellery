@@ -1,0 +1,18 @@
+.accordion-item-title {
+  padding-bottom: 50px;
+}
+
+.accordion-item-content {
+  position: relative;
+  display: none;
+  overflow: hidden;
+  transition: .5s ease-in-out;
+}
+
+.accordion-item.active .accordion-item-content {
+  display: block;
+}
+
+.accordion-item.active .accordion-item-title {
+  padding-bottom: 0;
+}

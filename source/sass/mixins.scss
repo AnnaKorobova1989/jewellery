@@ -7,6 +7,16 @@
   font-size: 7px;
 }
 
+@mixin heading-style {
+  margin: 0 0 35px;
+  text-align: center;
+  font-family: $heading-font-family;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44.2px;
+  letter-spacing: 1px;
+}
+
 @mixin list-reset {
   list-style: none;
   padding: 0;

@@ -1,0 +1,74 @@
+.faq {
+  padding-top: 20px;
+}
+
+.faq__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 970px;
+  border: 1px solid $gold-color;
+  margin: 0 auto;
+}
+
+.faq__item {
+  width: 100%;
+  border-bottom: 1px solid $gold-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.faq__item-title {
+  padding-top: 50px;
+  padding-left: 38px;
+  padding-right: 38px;
+  box-sizing: border-box;
+  position: relative;
+
+  &:hover h3 {
+    color: $gold-color;
+  }
+
+  h3 {
+    margin: 0;
+    font-family: "Poppins Medium";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: $font-color;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 9px;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 20px;
+      background-image: url("../img/icons/arrow-down.svg");
+    }
+  }
+}
+
+.faq__item-body {
+  padding-left: 38px;
+  padding-right: 38px;
+  box-sizing: border-box;
+
+  p {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    max-width: 527px;
+    font-family: "Poppins Regular";
+    font-size: 16px;
+    line-height: 130%;
+    color: $font-color;
+  }
+}

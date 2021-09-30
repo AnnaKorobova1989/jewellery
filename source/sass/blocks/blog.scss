@@ -1,0 +1,127 @@
+.blog__title {
+  font-family: "Cormorant Bold";
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  width: 100%;
+  text-align: center;
+}
+
+.blog__link {
+  @include link-reset;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: 130%;
+  width: 100%;
+  text-align: center;
+}
+
+.blog__list {
+  @include list-reset;
+  display: grid;
+  grid-template-areas: "care power"
+                       "jewellery power";
+  column-gap: 30px;
+  row-gap: 30px;
+  width: 100%;
+
+  @media (max-width: $tablet-width) {
+    grid-template-areas: "care"
+                         "jewellery"
+                         "power"
+  }
+}
+
+.blog__item {
+  max-width: 570px;
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+
+  &-picture {
+    width: 50%;
+
+    @media (max-width: $mobile-width) {
+      width: 100%;
+    }
+  }
+
+  &-description {
+    width: 50%;
+
+    @media (max-width: $mobile-width) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 100%;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    max-width: 100%;
+  }
+}
+
+.blog__item:first-child {
+  grid-area: care;
+}
+
+.blog__item:nth-child(2) {
+  grid-area: jewellery;
+}
+
+.blog__item:last-child {
+  grid-area: power;
+  position: relative;
+
+  .blog__item-picture {
+    width: 100%;
+  }
+}
+
+.blog__item:last-child .blog__item-description {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.blog__item-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog__item-description {
+  background-color: $dirty-white;
+
+  @media (max-width: $mobile-width) {
+    min-height: 256px;
+  }
+
+  p {
+    font-family: "Poppins Medium";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: $grey;
+  }
+
+  h3 {
+    font-family: "Cormorant Semi Bold";
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+    color: $total-black;
+  }
+
+  a {
+    @include link-reset;
+    font-family: "Poppins Medium";
+    font-size: 16px;
+    line-height: 130%;
+    color: $font-color;
+  }
+}
