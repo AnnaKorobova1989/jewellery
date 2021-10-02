@@ -1,5 +1,6 @@
 .main-picture__box {
   position: relative;
+  background-color: $gold-color;
 }
 
 .main-picture__title {
@@ -9,7 +10,7 @@
   top: 0;
   left: 0;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 182px;
 
   @media (max-width: $tablet-width) {
     left: 0;
@@ -40,6 +41,7 @@
     color: $basic-white;
     margin: 0;
     padding: 0;
+    margin-top: -7px;
 
     @media (max-width: $mobile-width) {
       font-size: 34px;

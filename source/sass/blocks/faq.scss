@@ -1,5 +1,15 @@
 .faq {
-  padding-top: 20px;
+  padding-top: 111px;
+}
+
+.faq__title {
+  font-family: "Cormorant Bold";
+  font-weight: bold;
+  font-size: 34px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .faq__list {
@@ -12,6 +22,7 @@
   max-width: 970px;
   border: 1px solid $gold-color;
   margin: 0 auto;
+  margin-top: 52px;
 }
 
 .faq__item {
@@ -24,9 +35,9 @@
 }
 
 .faq__item-title {
-  padding-top: 50px;
-  padding-left: 38px;
-  padding-right: 38px;
+  padding-top: 45px;
+  padding-left: 41px;
+  padding-right: 41px;
   box-sizing: border-box;
   position: relative;
 
@@ -50,7 +61,7 @@
       height: 9px;
       top: 50%;
       transform: translate(0, -50%);
-      right: 20px;
+      right: 10px;
       background-image: url("../img/icons/arrow-down.svg");
     }
   }
@@ -63,12 +74,13 @@
 
   p {
     margin: 0;
-    padding-top: 20px;
-    padding-bottom: 50px;
+    padding-top: 8px;
+    padding-bottom: 40px;
     max-width: 527px;
     font-family: "Poppins Regular";
     font-size: 16px;
     line-height: 130%;
     color: $font-color;
+    padding-left: 10px;
   }
 }

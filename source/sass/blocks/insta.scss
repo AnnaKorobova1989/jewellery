@@ -1,0 +1,89 @@
+.insta__title {
+  font-family: "Cormorant Bold";
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding-top: 40px;
+  margin: 0;
+  padding: 0;
+  padding-top: 68px;
+}
+
+.insta__link {
+  @include link-reset;
+  display: block;
+  font-family: "Poppins Medium";
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  margin-top: -13px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $gold-color;
+  }
+
+  &:hover {
+    color: $gold-color;
+  }
+}
+
+.insta__list {
+  @include list-reset;
+  display: grid;
+  grid-template-areas: "photo01 photo02 photo03 photo04"
+                       "photo05 photo02 photo06 photo07";
+  gap: 27px;
+  margin-top: 61px;
+  margin-bottom: 130px;
+}
+
+.insta__item:first-child {
+  grid-area: photo01;
+  max-width: 230px;
+  width: 100%;
+}
+
+.insta__item:nth-child(2) {
+  grid-area: photo02;
+  max-width: 400px;
+  width: 100%;
+}
+
+.insta__item:nth-child(3) {
+  grid-area: photo03;
+  max-width: 230px;
+  width: 100%;
+}
+
+.insta__item:nth-child(4) {
+  grid-area: photo04;
+  max-width: 230px;
+  width: 100%;
+}
+
+.insta__item:nth-child(5) {
+  grid-area: photo05;
+  max-width: 230px;
+  width: 100%;
+}
+
+.insta__item:nth-child(6) {
+  grid-area: photo06;
+  max-width: 230px;
+  width: 100%;
+}
+
+.insta__item:nth-child(7) {
+  grid-area: photo07;
+  max-width: 230px;
+  width: 100%;
+}

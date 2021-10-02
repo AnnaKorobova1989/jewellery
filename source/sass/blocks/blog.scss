@@ -6,25 +6,45 @@
   letter-spacing: 0.03em;
   width: 100%;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .blog__link {
   @include link-reset;
-  font-family: "Poppins";
+  font-family: "Poppins Medium";
   font-weight: 500;
   line-height: 130%;
+  font-size: 16px;
   width: 100%;
   text-align: center;
+  display: block;
+  position: relative;
+  padding-bottom: 4px;
+  margin-top: 17px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0;
+    width: 65px;
+    height: 1px;
+    transform: translateX(-50%);
+    background-color: $gold-color;
+  }
 }
 
 .blog__list {
   @include list-reset;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "care power"
                        "jewellery power";
   column-gap: 30px;
   row-gap: 30px;
   width: 100%;
+  margin-top: 60px;
 
   @media (max-width: $tablet-width) {
     grid-template-areas: "care"
@@ -71,6 +91,10 @@
 
 .blog__item:nth-child(2) {
   grid-area: jewellery;
+
+  .blog__item-picture {
+    order: 1;
+  }
 }
 
 .blog__item:last-child {
@@ -79,6 +103,10 @@
 
   .blog__item-picture {
     width: 100%;
+  }
+
+  .blog__item-description {
+    min-height: calc((100% - 30px)/2);
   }
 }
 
@@ -107,6 +135,10 @@
     font-size: 14px;
     line-height: 130%;
     color: $grey;
+    margin: 0;
+    margin-top: 68px;
+    padding: 0;
+    text-align: center;
   }
 
   h3 {
@@ -115,6 +147,11 @@
     font-size: 26px;
     line-height: 130%;
     color: $total-black;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    max-width: 165px;
   }
 
   a {
@@ -123,5 +160,26 @@
     font-size: 16px;
     line-height: 130%;
     color: $font-color;
+    display: block;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    margin-top: 40px;
+    padding-bottom: 4px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $gold-color;
+    }
+
+    &:hover {
+      color: $gold-color;
+    }
   }
 }

@@ -9,7 +9,7 @@
     letter-spacing: 0.03em;
     margin: 0;
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
   }
 
   p {
@@ -19,7 +19,7 @@
     color: $grey;
     margin: 0;
     padding: 0;
-    margin-bottom: 50px;
+    margin-bottom: 42px;
   }
 }
 
@@ -38,24 +38,32 @@
     border: none;
     width: 100%;
     border-bottom: 1px solid $basic-white;
-  }
+    padding-bottom: 5px;
 
-  &::placeholder {
-    font-family: "Poppins Medium";
-    font-size: 16px;
-    line-height: 130%;
-    color: $grey;
+    &::placeholder {
+      font-family: "Poppins Medium";
+      font-size: 14px;
+      line-height: 130%;
+      color: $grey;
+    }
   }
 }
 
+.footer__social-item svg {
+  margin-right: 13px;
+}
+
 .footer__button-signup {
+  font-family: "Poppins Medium";
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 500;
   background-color: transparent;
   border: none;
   position: absolute;
-  width: 29px;
-  height: 9px;
-  top: 0;
-  right: 0;
+  top: -13px;
+  right: 9px;
+  color: $basic-white;
 
   svg {
     stroke: $basic-white;
@@ -66,10 +74,10 @@
   @include list-reset;
   column-count: 2;
   column-gap: 70px;
-  width: 31,4%;
+  margin-left: 30px;
 
   li:not(:last-of-type) {
-    margin-bottom: 28px;
+    margin-bottom: 23px;
   }
 
   a {
@@ -91,7 +99,7 @@
   width: 10%;
 
   li:not(:last-of-type) {
-    margin-bottom: 28px;
+    margin-bottom: 23px;
   }
 
   a {
