@@ -1,5 +1,9 @@
 .accordion-item-title {
   padding-bottom: 40px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 46px;
+  }
 }
 
 .accordion-item-content {

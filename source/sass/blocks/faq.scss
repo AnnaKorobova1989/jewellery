@@ -1,5 +1,9 @@
 .faq {
   padding-top: 111px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 74px;
+  }
 }
 
 .faq__title {
@@ -23,6 +27,10 @@
   border: 1px solid $gold-color;
   margin: 0 auto;
   margin-top: 52px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 44px;
+  }
 }
 
 .faq__item {
@@ -40,6 +48,12 @@
   padding-right: 41px;
   box-sizing: border-box;
   position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 42px;
+    padding-left: 52px;
+    padding-right: 52px;
+  }
 
   &:hover h3 {
     color: $gold-color;
@@ -63,6 +77,14 @@
       transform: translate(0, -50%);
       right: 10px;
       background-image: url("../img/icons/arrow-down.svg");
+      background-repeat: no-repeat;
+
+      @media (max-width: $tablet-width) {
+        width: 23px;
+        height: 12px;
+        background-size: cover;
+        right: 0;
+      }
     }
   }
 }
@@ -82,5 +104,11 @@
     line-height: 130%;
     color: $font-color;
     padding-left: 10px;
+
+    @media (max-width: $tablet-width) {
+      max-width: 580px;
+      padding-top: 25px;
+      padding-bottom: 46px;
+    }
   }
 }

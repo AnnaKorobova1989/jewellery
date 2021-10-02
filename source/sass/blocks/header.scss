@@ -25,6 +25,10 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+
+  @media (max-width: $tablet-width) {
+    top: 29px;
+  }
 }
 
 .header__buttons {
