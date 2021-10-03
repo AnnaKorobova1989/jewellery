@@ -17,6 +17,10 @@
     top: 0;
   }
 
+  @media (max-width: $mobile-width) {
+    padding-top: 189px;
+  }
+
 
   h1 {
     font-family: "Cormorant Bold";
@@ -35,6 +39,7 @@
 
     @media (max-width: $mobile-width) {
       font-size: 38px;
+      margin-left: 0;
     }
   }
 
@@ -53,6 +58,7 @@
 
     @media (max-width: $mobile-width) {
       font-size: 34px;
+      margin-left: 0;
     }
   }
 }

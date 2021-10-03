@@ -4,6 +4,10 @@
   @media (max-width: $tablet-width) {
     padding-top: 74px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 61px;
+  }
 }
 
 .faq__title {
@@ -31,6 +35,12 @@
   @media (max-width: $tablet-width) {
     margin-top: 44px;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 33px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 .faq__item {
@@ -55,6 +65,12 @@
     padding-right: 52px;
   }
 
+  @media (max-width: $mobile-width) {
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 17px;
+  }
+
   &:hover h3 {
     color: $gold-color;
   }
@@ -67,6 +83,11 @@
     line-height: 130%;
     color: $font-color;
     position: relative;
+
+    @media (max-width: $mobile-width) {
+      font-size: 16px;
+      max-width: 201px;
+    }
 
     &::after {
       content: "";
@@ -85,6 +106,11 @@
         background-size: cover;
         right: 0;
       }
+
+      @media (max-width: $mobile-width) {
+        top: 35%;
+        right: -40px;
+      }
     }
   }
 }
@@ -93,6 +119,11 @@
   padding-left: 38px;
   padding-right: 38px;
   box-sizing: border-box;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 
   p {
     margin: 0;
@@ -109,6 +140,11 @@
       max-width: 580px;
       padding-top: 25px;
       padding-bottom: 46px;
+    }
+
+    @media (max-width: $mobile-width) {
+      font-size: 14px;
+      max-width: 216px;
     }
   }
 }

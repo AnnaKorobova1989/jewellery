@@ -29,6 +29,10 @@
   @media (max-width: $tablet-width) {
     top: 29px;
   }
+
+  @media (max-width: $mobile-width) {
+    top: 21px;
+  }
 }
 
 .header__buttons {
@@ -273,9 +277,13 @@
 }
 
 @media (max-width: $mobile-width) {
-  .header__closed {
-    max-height: 92px;
-    padding: 38px 0;
+  .header {
+    min-height: 92px;
+    padding: 0 0 0;
+  }
+
+  .header__buttons {
+    padding-top: 38px;
   }
 
   .header__logo svg {

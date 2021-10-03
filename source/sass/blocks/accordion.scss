@@ -4,6 +4,10 @@
   @media (max-width: $tablet-width) {
     padding-bottom: 46px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 14px;
+  }
 }
 
 .accordion-item-content {
