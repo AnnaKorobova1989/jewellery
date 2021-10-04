@@ -1,150 +1,133 @@
 .faq {
-  padding-top: 111px;
-
-  @media (max-width: $tablet-width) {
-    padding-top: 74px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-top: 61px;
-  }
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
 }
 
 .faq__title {
-  font-family: "Cormorant Bold";
-  font-weight: bold;
-  font-size: 34px;
-  letter-spacing: 0.03em;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  @include heading-style;
+  margin-bottom: 48px;
 }
 
-.faq__list {
-  @include list-reset;
-
+.faq__accordeon {
+  @include list-style;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 970px;
-  border: 1px solid $gold-color;
-  margin: 0 auto;
-  margin-top: 52px;
-
-  @media (max-width: $tablet-width) {
-    margin-top: 44px;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-top: 33px;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
-
-.faq__item {
   width: 100%;
-  border-bottom: 1px solid $gold-color;
+  max-width: 970px;
+  margin: 0 auto;
+}
 
-  &:hover {
-    cursor: pointer;
+.faq__item br {
+  display: none;
+}
+
+.faq__button {
+  padding: 45px 50px 43px 42px;
+  font-size: 18px;
+  line-height: 23.4px;
+
+  &::after {
+    right: 50px;
   }
 }
 
-.faq__item-title {
-  padding-top: 45px;
-  padding-left: 41px;
-  padding-right: 41px;
-  box-sizing: border-box;
-  position: relative;
+.faq__item .active-item,
+.accordeon-no-js .faq__button {
+  padding-bottom: 7px;
+}
 
-  @media (max-width: $tablet-width) {
-    padding-top: 42px;
-    padding-left: 52px;
-    padding-right: 52px;
+.faq__item .active-item {
+  &::after {
+    top: 68%;
+  }
+}
+
+.faq__panel p {
+  margin: 0;
+}
+
+.faq__panel {
+  display: none;
+  padding: 0 395px 43px 50px;
+}
+
+.accordeon-no-js .faq__panel {
+  display: block;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .faq {
+    padding-top: 70px;
   }
 
-  @media (max-width: $mobile-width) {
-    padding-left: 26px;
-    padding-right: 26px;
-    padding-top: 17px;
+  .faq__title {
+    margin-bottom: 45px;
   }
 
-  &:hover h3 {
-    color: $gold-color;
+  .faq__accordeon {
+    width: 100%;
   }
 
-  h3 {
-    margin: 0;
-    font-family: "Poppins Medium";
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 130%;
-    color: $font-color;
-    position: relative;
+  .faq__button {
+    padding: 45px 50px 44px 48px;
+  }
 
-    @media (max-width: $mobile-width) {
-      font-size: 16px;
-      max-width: 201px;
+  .faq__item .active-item,
+  .accordeon-no-js .faq__button {
+    padding-bottom: 26px;
+  }
+
+  .faq__item .active-item {
+    &::after {
+      top: 55%;
     }
+  }
+
+  .faq__panel {
+    padding: 0 90px 43px 48px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .faq {
+    margin-top: 0;
+    padding-top: 55px;
+  }
+
+  .faq h2 {
+    margin-bottom: 28px;
+  }
+
+  .faq__item br {
+    display: block;
+  }
+
+  .faq__button {
+    padding: 18px 50px 21px 23px;
+    font-size: 16px;
+    line-height: 22.4px;
 
     &::after {
-      content: "";
-      position: absolute;
-      width: 15px;
-      height: 9px;
-      top: 50%;
-      transform: translate(0, -50%);
-      right: 10px;
-      background-image: url("../img/icons/arrow-down.svg");
-      background-repeat: no-repeat;
-
-      @media (max-width: $tablet-width) {
-        width: 23px;
-        height: 12px;
-        background-size: cover;
-        right: 0;
-      }
-
-      @media (max-width: $mobile-width) {
-        top: 35%;
-        right: -40px;
-      }
+      top: 33%;
+      right: 22px;
     }
   }
-}
 
-.faq__item-body {
-  padding-left: 38px;
-  padding-right: 38px;
-  box-sizing: border-box;
-
-  @media (max-width: $mobile-width) {
-    padding-left: 14px;
-    padding-right: 14px;
+  .faq__item .active-item,
+  .accordeon-no-js .faq__button {
+    padding-bottom: 15px;
   }
 
-  p {
-    margin: 0;
-    padding-top: 8px;
-    padding-bottom: 40px;
-    max-width: 527px;
-    font-family: "Poppins Regular";
-    font-size: 16px;
-    line-height: 130%;
-    color: $font-color;
-    padding-left: 10px;
-
-    @media (max-width: $tablet-width) {
-      max-width: 580px;
-      padding-top: 25px;
-      padding-bottom: 46px;
+  .faq__item .active-item {
+    &::after {
+      top: 30%;
     }
+  }
 
-    @media (max-width: $mobile-width) {
-      font-size: 14px;
-      max-width: 216px;
-    }
+  .faq__panel {
+    padding: 0 55px 20px 23px;
+    font-size: 14px;
+    line-height: 19.6px;
   }
 }

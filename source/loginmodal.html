@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CH Jewellery Store's Log In">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.min.css">
+  <title>Jewellery</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="main.html" class="header__logo">
+      <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        focusable="false">
+        <use xlink:href="img/sprite.svg#icon-logo"></use>
+      </svg>
+    </a>
+  </header>
+  <main>
+    <section class="login-modal modal">
+      <div class="login-modal__window modal__window modal__no-js">
+        <div class="login-modal__img-box">
+          <picture>
+            <source
+              srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.webp 1x, img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.webp 2x"
+              type="image/webp">
+            <!-- 1x: 430px; 2x: 860px -->
+            <img src="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.jpg"
+              srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.jpg 2x" width="430" height="138"
+              alt="Золотые украшения с бусинами" loading="lazy">
+          </picture>
+        </div>
+        <div class="login-modal__wrapper">
+          <h2>Log In</h2>
+          <form method="get">
+            <div class="login-modal__input login-modal__input--email">
+              <label for="modal-email"></label>
+              <input type="email" name="modal-email" id="modal-email" placeholder="Your E-mail" required>
+            </div>
+            <div class="login-modal__input login-modal__input--password">
+              <label for="modal-password"></label>
+              <input type="password" name="modal-password" id="modal-password" placeholder="Password" required>
+            </div>
+            <a class="login-modal__forgotpassword" href="#">Forgot your password?</a>
+            <button class="login-modal__submit button" type="submit">Log In</button>
+            <div class="login-modal__text">
+              <p>Don’t have an account?</p>
+              <a class="login-modal__signup" href="#">Sign up</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

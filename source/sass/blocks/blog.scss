@@ -1,222 +1,187 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+}
+
 .blog__title {
-  font-family: "Cormorant Bold";
-  font-weight: bold;
-  font-size: 34px;
-  line-height: 130%;
-  letter-spacing: 0.03em;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  @include heading-style;
+  margin-bottom: 20px;
 }
 
 .blog__link {
-  @include link-reset;
-  font-family: "Poppins Medium";
-  font-weight: 500;
-  line-height: 130%;
-  font-size: 16px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  position: relative;
-  padding-bottom: 4px;
-  margin-top: 17px;
-
   &::after {
-    position: absolute;
-    content: "";
-    left: 50%;
-    bottom: 0;
-    width: 65px;
-    height: 1px;
-    transform: translateX(-50%);
-    background-color: $gold-color;
+    width: 64px;
   }
 }
 
 .blog__list {
-  @include list-reset;
+  @include list-style;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "care power"
-                       "jewellery power";
-  column-gap: 30px;
-  row-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px 30px;
   width: 100%;
-  margin-top: 60px;
-
-  @media (max-width: $tablet-width) {
-    grid-template-areas: "care"
-                         "jewellery"
-                         "power";
-  grid-template-columns: 1fr;
-  row-gap: 50px;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-top: 52px;
-    row-gap: 40px;
-  }
+  margin-top: 55px;
 }
 
 .blog__item {
-  max-width: 570px;
   display: flex;
+  max-width: 570px;
   width: 100%;
   align-items: stretch;
 
-  &-picture {
-    width: 50%;
-
-    @media (max-width: $mobile-width) {
-      width: 100%;
-    }
-  }
-
-  &-description {
-    width: 50%;
-
-    @media (max-width: $mobile-width) {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: $tablet-width) {
-    max-width: 100%;
-  }
-
-  @media (max-width: $mobile-width) {
-    flex-direction: column;
-    max-width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
+  &--big {
+    position: relative;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
   }
 }
 
-.blog__item:first-child {
-  grid-area: care;
-}
+.blog__img-box {
+  width: 50%;
+  // max-height: 300px;
 
-.blog__item:nth-child(2) {
-  grid-area: jewellery;
-
-  .blog__item-picture {
-    order: 1;
-
-    @media (max-width: $mobile-width) {
-      order: 0;
-    }
-  }
-}
-
-.blog__item:last-child {
-  grid-area: power;
-  position: relative;
-
-  .blog__item-picture {
+  img {
     width: 100%;
-
-    @media (max-width: $tablet-width) {
-      width: 50%;
-    }
-
-    @media (max-width: $mobile-width) {
-      width: 100%;
-    }
+    height: 100%;
+    object-fit: cover;
   }
 
-  .blog__item-description {
-    min-height: calc((100% - 30px)/2);
+  &--big {
+    width: 100%;
+    // max-height: 630px;
+  }
 
-    @media (max-width: $mobile-width) {
-      min-height: 256px;
-    }
+  &--crystal {
+    order: 2;
   }
 }
 
-.blog__item:last-child .blog__item-description {
+.blog__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  min-height: 100%;
+  padding: 11% 10%;
+  text-align: center;
+  background-color: $light-grey;
+}
+
+.blog__item--big .blog__card {
   position: absolute;
   bottom: 0;
   right: 0;
+  min-height: calc((100% - 30px) / 2);
+}
 
-  @media (max-width: $tablet-width) {
-    position: relative;
+.blog__card p {
+  margin: 0 0 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px;
+  color: $basic-grey;
+
+  &::after {
+    content: none;
   }
 }
 
-.blog__item-picture img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.blog__card-title {
+  @include heading-style;
+  margin: 0 0 40px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 33.8px;
+  color: $basic-black;
+  letter-spacing: 0;
+}
 
-  @media (max-width: $tablet-width) {
-    aspect-ratio: 347/300;
+.blog__card-link {
+  &::after {
+    width: 97px;
   }
 }
 
-.blog__item-description {
-  background-color: $dirty-white;
-
-  @media (max-width: $mobile-width) {
-    min-height: 256px;
+@media (max-width: $tablet-breakpoint) {
+  .blog__list {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, min-content);
+    gap: 50px 0;
+    width: 100%;
+    margin-top: 55px;
   }
 
-  p {
-    font-family: "Poppins Medium";
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 130%;
-    color: $grey;
-    margin: 0;
-    margin-top: 68px;
-    padding: 0;
-    text-align: center;
+  .blog__item {
+    max-width: 100%;
+  }
 
-    @media (max-width: $mobile-width) {
-      margin-top: 45px;
+  .blog__item--big {
+    grid-column: auto;
+    grid-row: auto;
+
+    .blog__img-box {
+      width: 50%;
     }
   }
 
-  h3 {
-    font-family: "Cormorant Semi Bold";
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 130%;
-    color: $total-black;
-    text-align: center;
+  .blog__img-box {
+    img {
+      // height: 300px;
+      // max-height: 100%;
+      aspect-ratio: 339/300;
+    }
+  }
+
+  .blog__card {
+    position: static;
+    padding: 9.8% 10% 5%;
+  }
+
+  .blog__item--big .blog__card {
+    position: static;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .blog__list {
+    margin-top: 42px;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px 0;
+  }
+
+  .blog__item {
+    flex-direction: column;
     margin: 0 auto;
-    margin-top: 10px;
-    padding: 0;
-    max-width: 165px;
   }
 
-  a {
-    @include link-reset;
-    font-family: "Poppins Medium";
-    font-size: 16px;
-    line-height: 130%;
-    color: $font-color;
-    display: block;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-    margin-top: 40px;
-    padding-bottom: 4px;
+  .blog__img-box {
+    min-width: 290px;
+    width: 100%;
+    margin: 0 auto;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 1px;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: $gold-color;
+    img {
+      aspect-ratio: 290/256;
     }
 
-    &:hover {
-      color: $gold-color;
+    &--crystal {
+      order: 0;
     }
+  }
+
+  .blog__item--big {
+    .blog__img-box {
+      width: 100%;
+    }
+  }
+
+  .blog__card {
+    width: 100%;
+    min-height: 256px;
+    padding: 15.53% 13%;
+  }
+
+  .blog__item--big .blog__card {
+    min-height: 256px;
   }
 }

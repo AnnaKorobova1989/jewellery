@@ -1,0 +1,44 @@
+.product {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $light-grey;
+  }
+}
+
+.product__suggestions {
+  padding-bottom: 126px;
+}
+
+.product__suggestions h2 {
+  @include heading-style;
+  margin-bottom: 23px;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .product {
+    &::before {
+      content: none;
+    }
+  }
+
+  .product__suggestions {
+    padding: 70px 0 74px;
+  }
+
+  .product__suggestions h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .product__suggestions {
+    padding: 52px 0 66px;
+  }
+}

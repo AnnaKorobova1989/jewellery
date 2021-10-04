@@ -1,0 +1,43 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $body-font-family;
+  font-size: 16px;
+  line-height: 20.8px;
+  background-color: $basic-white;
+  color: $basic-dark;
+  overflow-x: hidden;
+}
+
+body .modal-show {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.fixed {
+  position: fixed;
+  overflow-y: hidden;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  body .header-opened,
+  body .filter {
+    width: 100%;
+  }
+
+  body .header-opened,
+  body .filter-show {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}

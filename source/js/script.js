@@ -1,21 +1,31 @@
 'use strict';
-//Menu
-const header = document.querySelector('.header');
-const headerBurger = document.querySelector('.header__button--burger');
 
-header.classList.remove('header--no-js');
+(function () {
+  const accordeon = document.querySelectorAll('.accordeon');
+  const accordeonButton = document.querySelectorAll('.accordeon__button');
 
-headerBurger.addEventListener('click', function () {
-  if (header.classList.contains('header__closed')) {
-    header.classList.remove('header__closed');
-    header.classList.add('header__opened');
-  } else {
-    header.classList.remove('header__opened');
-    header.classList.add('header__closed');
+  accordeon.forEach(function (acc) {
+    acc.classList.remove('accordeon-no-js');
+  })
+
+  function hideAll() {
+    accordeonButton.forEach(function (acc) {
+      acc.classList.remove('active-item');
+      acc.nextElementSibling.classList.remove('show');
+    });
   }
-});
 
-//Slider
+  accordeonButton.forEach(function (acc) {
+    acc.addEventListener('click', function () {
+      if (acc != this) {
+        hideAll();
+      }
+      this.classList.toggle('active-item');
+      this.nextElementSibling.classList.toggle('show');
+    })
+  });
+})();
+
 
 (function () {
   const swiper = new Swiper('.mySwiper', {
@@ -67,18 +77,163 @@ headerBurger.addEventListener('click', function () {
   });
 })();
 
+(function () {
+  const body = document.body;
+  const headerMain = document.querySelector('.header');
+  const navToggleButton = document.querySelector('.header__button--burger');
+
+  headerMain.classList.remove('header-no-js');
+
+  navToggleButton.addEventListener('click', function () {
+    if (headerMain.classList.contains('header-closed')) {
+      headerMain.classList.remove('header-closed');
+      headerMain.classList.add('header-opened');
+      body.classList.add('fixed');
+      body.style.width = '100%';
+    } else {
+      headerMain.classList.remove('header-opened');
+      headerMain.classList.add('header-closed');
+      body.classList.remove('fixed');
+    }
+  });
+})();
 
 
-const accordions = document.querySelectorAll('.accordion-item');
+(function () {
+  const body = document.querySelector('body');
+  const loginLink = document.querySelector('.header__user-item--login');
+  const loginModal = document.querySelector('.login-modal');
+  const loginOverlay = document.querySelector('.login-modal__overlay');
+  // const loginWindow = document.querySelector('.login-modal__window');
+  const loginClose = document.querySelector('.login-modal__close');
+  const loginEmail = document.querySelector('#modal-email');
+  const catalog = document.querySelector('.catalog');
+  const filter = document.querySelector('.filter');
+  const filterOpenButton = document.querySelector('.catalog__filter-button');
+  const filterCloseButton = document.querySelector('.filter__close');
+  const addButton = document.querySelector('.profile__add');
+  const cartModal = document.querySelector('.cart-modal');
+  const cartOverlay = document.querySelector('.cart-modal__overlay');
+  const cartPlus = document.querySelector('.cart-modal__control--plus');
+  const cartClose = document.querySelector('.cart-modal__close');
+  const cartCount = document.querySelector('.cart-count');
+  let count = 0;
+  let isStorageSupport = true;
+  let storageEmail = '';
 
-  for (let item of accordions) {
-    item.addEventListener('click', function() {
-      this.classList.toggle('active')
-    })
+  try {
+    storageEmail = localStorage.getItem('email');
+  } catch (err) {
+    isStorageSupport = false;
   }
 
+  const removeNoJs = function (overlay) {
+    overlay.classList.remove('modal__no-js');
+  }
 
-  'use strict';
+  const openModalWindow = function (overlay) {
+    overlay.classList.add('modal-show');
+    body.classList.add('fixed');
+    body.style.width = '100%';
+  }
+
+  const addModalShade = function (modal) {
+    modal.classList.add('shade');
+  }
+
+  const closeModalWindow = function (overlay) {
+    if (overlay.classList.contains('modal-show')) {
+      overlay.classList.remove('modal-show');
+      body.classList.remove('fixed');
+    }
+  }
+
+  const removeModalShade = function (modal) {
+    modal.classList.remove('shade');
+  }
+
+  removeNoJs(loginOverlay);
+
+  loginLink.addEventListener('click', function (evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    openModalWindow(loginOverlay);
+    addModalShade(loginModal);
+    loginEmail.focus();
+  });
+
+  loginClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    closeModalWindow(loginOverlay);
+    removeModalShade(loginModal);
+  });
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      closeModalWindow(loginOverlay);
+      removeModalShade(loginModal);
+    }
+  });
+
+  loginOverlay.addEventListener('click', function (evt) {
+    if (evt.target.closest('.modal__window')) {
+      evt.stopPropagation();
+    } else {
+      closeModalWindow(loginOverlay);
+      removeModalShade(loginModal);
+    }
+  });
+
+  if (window.location.href.endsWith('product.html')) {
+    removeNoJs(cartOverlay);
+
+    addButton.addEventListener('click', function (evt) {
+      evt.stopPropagation();
+      evt.preventDefault();
+      openModalWindow(cartOverlay);
+      addModalShade(cartModal);
+      cartPlus.focus();
+      count = count + 1
+      cartCount.innerHTML = count;
+    });
+
+    cartClose.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      closeModalWindow(cartOverlay);
+      removeModalShade(cartModal);
+    });
+
+    window.addEventListener('keydown', function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        closeModalWindow(cartOverlay);
+        removeModalShade(cartModal);
+      }
+    });
+
+    cartOverlay.addEventListener('click', function (evt) {
+      if (evt.target.closest('.modal__window')) {
+        evt.stopPropagation();
+      } else {
+        closeModalWindow(cartOverlay);
+        removeModalShade(cartModal);
+      }
+    });
+  }
+
+  if (window.location.href.endsWith('catalog.html')) {
+    removeNoJs(catalog);
+
+    filterOpenButton.addEventListener('click', function () {
+      openModalWindow(filter);
+    });
+
+    filterCloseButton.addEventListener('click', function () {
+      closeModalWindow(filter);
+    });
+  }
+})();
 
 (function () {
   const inputLeft = document.querySelector('#left-range');

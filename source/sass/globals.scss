@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  // height: auto;
+}
+
+input[type="text"],
+input[type="email"] {
+  border-radius: 0;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.content {
+  a {
+    @include transition;
+    color: $basic-dark;
+
+    &:hover,
+    &:focus {
+      color: $light-brown;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.link {
+  @include transition;
+  display: block;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20.8px;
+  text-align: center;
+  color: $basic-dark;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: $light-brown;
+  }
+
+  &:hover,
+  &:focus {
+    color: $light-brown;
+
+    &::after {
+      background-color: $basic-dark;
+    }
+  }
+
+  &:active {
+    color: $light-brown;
+    opacity: 0.7;
+
+    &::after {
+      background-color: $basic-dark;
+      opacity: 0.7;
+    }
+  }
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  color: $basic-dark;
+  cursor: pointer;
+}
+
+.card-link:hover .card-link__img,
+.card-link:focus .card-link__img {
+  opacity: 0.8;
+}
+
+.card-link:active .card-link__img {
+  opacity: 0.5;
+}
+
+.card-link:hover .card-link__text,
+.card-link:focus .card-link__text {
+  color: $light-brown;
+}
+
+.card-link:active .card-link__text {
+  opacity: 0.5;
+}
+
+.button {
+  @include transition;
+  width: 250px;
+  height: 68px;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: $body-font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20.8px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $basic-white;
+    background-color: $basic-dark;
+    border: 1px solid $basic-dark;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.container {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 98px;
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0 15px;
+  }
+}

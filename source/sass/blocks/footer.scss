@@ -1,189 +1,258 @@
 .footer {
-  background-color: $total-black;
-
-  h2 {
-    color: $basic-white;
-    font-family: "Cormorant Bold";
-    font-size: 34px;
-    line-height: 130%;
-    letter-spacing: 0.03em;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-family: "Poppins Medium";
-    font-size: 16px;
-    line-height: 130%;
-    color: $grey;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 42px;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 92px 0;
+  background-color: $basic-black;
+  color: $basic-white;
+  box-sizing: border-box;
 }
 
-.footer__subscribtion-form {
-  position: relative;
-}
-
-.footer__subscription {
-  width: 43.5%;
-}
-
-.footer__subscription-email {
-
-  input {
-    background-color: transparent;
-    border: none;
-    width: 100%;
-    border-bottom: 1px solid $basic-white;
-    padding-bottom: 5px;
-
-    &::placeholder {
-      font-family: "Poppins Medium";
-      font-size: 14px;
-      line-height: 130%;
-      color: $grey;
-    }
-  }
-}
-
-.footer__social-item svg {
-  margin-right: 13px;
-}
-
-.footer__button-signup {
-  font-family: "Poppins Medium";
-  font-size: 16px;
-  line-height: 130%;
-  font-weight: 500;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  top: -13px;
-  right: 9px;
+.footer a {
+  @include transition;
   color: $basic-white;
 
-  svg {
-    stroke: $basic-white;
+  &:focus,
+  &:hover {
+    color: $light-brown;
+  }
+
+  &:focus svg,
+  &:hover svg {
+    fill: $light-brown;
+  }
+
+  &:active {
+    color: $light-brown;
+    opacity: 0.5;
+  }
+
+  &:active svg {
+    fill: $light-brown;
+    opacity: 0.5;
   }
 }
 
-.footer__info-list {
-  @include list-reset;
-  column-count: 2;
-  column-gap: 70px;
-  margin-left: 30px;
-
-  li:not(:last-of-type) {
-    margin-bottom: 23px;
-  }
-
-  a {
-    @include link-reset;
-    font-family: "Poppins Medium";
-    font-weight: 500;
-    font-size: 16px;
-    color: $basic-white;
-    line-height: 130%;
-
-    &:hover {
-      color: $gold-color;
-    }
-  }
-
-  @media (max-width: $tablet-width) {
-    width: 64%;
-    margin-left: 5px;
-  }
-}
-
-.footer__social-list {
-  @include list-reset;
-  width: 10%;
-
-  li:not(:last-of-type) {
-    margin-bottom: 23px;
-  }
-
-  a {
-    @include link-reset;
-    font-family: "Poppins Medium";
-    font-weight: 500;
-    font-size: 16px;
-    color: $basic-white;
-    line-height: 130%;
-
-    &:hover {
-      color: $gold-color;
-    }
-  }
-}
-
-.footer__container {
-  margin-top: 91px;
-  margin-bottom: 100px;
+.footer .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
-  @media (max-width: $tablet-width) {
-    margin-top: 53px;
+.footer__subscription {
+  max-width: 500px;
+  width: 43.5%;
+  margin-right: 35px;
+}
+
+.footer__title {
+  @include heading-style;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.footer__subscription p {
+  margin: 0 0 41px;
+  font-size: 16px;
+  line-height: 20.8px;
+  color: $basic-grey;
+}
+
+.footer__subscription-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0 10px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $basic-white;
   }
 }
 
-@media (max-width: $tablet-width) {
-  .footer__container {
-    width: 89.4%;
-    padding: 0;
+.footer__subscription-email {
+  width: 62%;
+}
+
+.footer__subscription-email input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: $basic-white;
+  font-family: $body-font-family;
+  font-size: 14px;
+  line-height: 21px;
+  outline: none;
+
+  &::placeholder {
+    color: $basic-grey;
+  }
+}
+
+.footer__subscription-signup {
+  @include transition;
+  padding: 0;
+  border: none;
+  font-family: $body-font-family;
+  font-size: 16px;
+  line-height: 20.8px;
+  background: transparent;
+  color: $basic-white;
+  cursor: pointer;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    color: $light-brown;
   }
 
-  .footer__subscribtion-form {
-    width: 92%;
+  &:focus svg,
+  &:hover svg {
+    stroke: $light-brown;
+  }
+
+  &:active {
+    color: $light-brown;
+    opacity: 0.5;
+  }
+
+  &:active svg {
+    stroke: $light-brown;
+    opacity: 0.5;
+  }
+}
+
+.footer__subscription-signup svg {
+  @include transition;
+  margin-left: 12px;
+  stroke: $basic-white;
+}
+
+.footer__info-list {
+  @include list-style;
+  column-count: 2;
+  column-gap: 71px;
+  width: 35%;
+  margin-top: 7px;
+}
+
+.footer__social-list {
+  @include list-style;
+  margin-top: 7px;
+}
+
+.footer__info-item,
+.footer__social-item {
+  margin-bottom: 22px;
+}
+
+.footer__info-item a,
+.footer__social-item a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+
+.footer__social-item svg {
+  @include transition;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  margin-right: 8px;
+  fill: $basic-white;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .footer {
+    padding: 52px 0 30px;
+  }
+
+  .footer .container {
+    width: 85.4%;
+    margin: 0;
   }
 
   .footer__subscription {
     width: 100%;
-    margin-bottom: 40px;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .footer__subscription-form {
+    width: 99%;
+    margin-bottom: 45px;
   }
 
   .footer__info-list {
-    width: 64%;
-    margin-top: 10px;
+    column-gap: 86px;
+    width: auto;
   }
 
+  .footer__info-list,
   .footer__social-list {
-    width: 33%;
-    margin-top: 10px;
+    margin: 0;
   }
 }
 
-@media (max-width: $mobile-width) {
-  .footer__subscription {
+@media (max-width: $mobile-breakpoint) {
+  .footer {
+    padding: 51px 0;
+  }
+
+  .footer .container {
+    flex-direction: column;
     width: 100%;
-    margin-bottom: 40px;
+    margin: 0 auto;
+  }
+
+  .footer__title {
+    margin-bottom: 11px;
+    padding: 0 50px 0 0;
+  }
+
+  .footer__subscription p {
+    margin-bottom: 39px;
+    padding: 0 50px 0 0;
+    line-height: 22.4px;
+  }
+
+  .footer__subscription-form {
+    width: 100%;
+  }
+
+  .footer__subscription-signup svg {
+    margin-left: 9px;
   }
 
   .footer__info-list {
     column-count: 1;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
-  .footer__info-list {
-    width: 100%;
+  .footer__info-item {
+    &--about {
+      margin-top: 43px;
+    }
   }
 
   .footer__social-list {
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+  }
 
-    li:not(:last-of-type) {
-      margin-right: 30px;
-    }
+  .footer__social-item span {
+    display: none;
+  }
 
-    span {
-      display: none;
-    }
+  .footer__social-item svg {
+    width: 20px;
+    height: 21px;
+    margin: 0 27px 0 0;
   }
 }

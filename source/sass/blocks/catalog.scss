@@ -1,13 +1,7 @@
 .catalog {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  padding: 0;
-}
-
-.catalog__choosing {
-  display: flex;
-  margin-top: 3px;
+  padding: 80px 98px 73px;
 }
 
 .catalog__filter-button {
@@ -16,11 +10,10 @@
 
 .catalog__wrapper {
   width: 74.4%;
-  margin-bottom: 69px;
 }
 
 .catalog__list {
-  @include list-reset;
+  @include list-style;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -30,18 +23,6 @@
 
 .catalog__item {
   height: fit-content;
-
-  a {
-    @include link-reset;
-
-    font-family: "Poppins Medium";
-    font-weight: 500;
-    line-height: 130%;
-
-    &:hover {
-      color: $gold-color;
-    }
-  }
 }
 
 .catalog__img-box {
@@ -53,7 +34,7 @@
 }
 
 .catalog__info {
-  margin-top: 15px;
+  margin-top: 22px;
   text-align: center;
 
   p {
@@ -65,7 +46,6 @@
 }
 
 .catalog__info h3 {
-
   margin: 0 0 7px;
   font-weight: 500;
   font-size: 16px;
@@ -86,21 +66,19 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 200%;
     height: 1px;
     background-color: $light-grey;
   }
 }
 
 .catalog__pagination-direction {
-  @include link-reset
-  font-family: "Poppins Medium";
   font-weight: 500;
-  color: $total-black;
+  color: $basic-dark;
 }
 
 .catalog__pagination-list {
-  @include list-reset;
+  @include list-style;
   display: flex;
   width: fit-content;
   margin-left: -25px;
@@ -112,25 +90,24 @@
   }
 
   .catalog__pagination-link {
-    @include link-reset;
-    font-family: "Poppins Medium";
     font-weight: 500;
-    color: $grey;
+    color: $basic-grey;
   }
 
   &--current {
     .catalog__pagination-link {
-      color: $total-black;
-      font-family: "Poppins Medium";
+      color: $basic-dark;
     }
   }
 }
 
 .catalog__pagination-direction,
 .catalog__pagination-link {
+  @include transition;
+
   &:hover,
   &:focus {
-    color: $gold-color;
+    color: $light-brown;
   }
 
   &:active {
@@ -138,7 +115,7 @@
   }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-breakpoint) {
   .catalog {
     flex-direction: column;
     padding: 50px 45px 73px;
@@ -148,7 +125,7 @@
     display: block;
     width: 100%;
     margin-bottom: 50px;
-    background-color: $gold-color;
+    background-color: $light-brown;
     color: $basic-white;
   }
 
@@ -175,7 +152,7 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: $mobile-breakpoint) {
   .catalog {
     padding: 40px 15px 65px;
   }

@@ -1,128 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" class="page">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Jewellery</title>
+  <meta name="description" content="CH Jewellery Store">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/cormorant-garamond-bold.woff" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-italic.woff" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff2" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-bold.woff" as="font">
-  <link rel="preload" href="fonts/poppins-bold.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-medium.woff" as="font">
-  <link rel="preload" href="fonts/poppins-medium.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-regular.woff" as="font">
-  <link rel="preload" href="fonts/poppins-regular.woff2" as="font">
-
+  <title>Jewellery</title>
 </head>
-<body class="page__body">
-  <div class="wrapper">
-  <header class="header header__closed header--no-js">
-    <div class="container">
-        <a class="header__logo">
-          <svg width="66" height="66" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#logo"></use>
+
+<body>
+  <header class="header header-closed header-no-js">
+    <div class="header__wrapper container">
+      <a class="header__logo">
+        <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+          focusable="false">
+          <use xlink:href="img/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <div class="header__buttons">
+        <button type="button" class="header__button header__button--burger">
+          <svg width="25" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-burger"></use>
           </svg>
-        </a>
-        <div class="header__buttons">
-          <button type="button" class="header__button header__button--burger">
-            <svg width="25" height="16" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite.svg#burger-black"></use>
-            </svg>
-          </button>
-          <button type="button" class="header__button header__button--cart">
-            <svg width="18" height="16" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite.svg#cart"></use>
-            </svg>
-          </button>
-        </div>
-        <nav class="header__navigation">
-          <form method="POST">
-            <div class="header__navigation-search">
-              <label for="search">
-                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#search"></use>
-                </svg>
-              </label>
-              <input type="text" id="search" placeholder="Type here to search">
-            </div>
-          </form>
-          <ul class="header__user-list">
-            <li class="header__user-item header__user-item--about">
-              <a href="#">About CH</a>
-            </li>
-            <li class="header__user-item header__user-item--stores">
-              <a href="#">Stores & Hours</a>
-            </li>
-            <li class="header__user-item header__user-item--contact">
-              <a href="#">Contact Us</a>
-            </li>
-            <li class="header__user-item header__user-item--login">
-              <a href="#">Login</a>
-            </li>
-            <li class="header__user-item header__user-item--cart">
-              <a href="#">Cart <span class="header__cart-count">0</span></a>
-            </li>
-          </ul>
-          <ul class="header__navigation-list">
-            <li class="header__navigation-item">
-              <a href="#">What's new</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">Chockers</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">Necklaces</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">Rings</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">Earrings</a>
-            </li>
-          </ul>
-        </nav>
+        </button>
+        <button type="button" class="header__button header__button--cart">
+          <svg width="20" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-cart"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__navigation">
+        <form method="post">
+          <div class="header__navigation-search">
+            <label for="search">
+              <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-lens"></use>
+              </svg>
+            </label>
+            <input type="text" name="search" id="search" placeholder="Type here to search">
+          </div>
+        </form>
+        <ul class="header__user-list">
+          <li class="header__user-item header__user-item--about">
+            <a href="#">About CH</a>
+          </li>
+          <li class="header__user-item header__user-item--stores">
+            <a href="#">Stores & Hours</a>
+          </li>
+          <li class="header__user-item header__user-item--contacts">
+            <a href="#">Contact Us</a>
+          </li>
+          <li class="header__user-item header__user-item--login">
+            <a href="loginmodal.html" target="_blank">Login</a>
+          </li>
+          <li class="header__user-item header__user-item--cart">
+            <a href="#">Cart <span class="cart-count">0</span></a>
+          </li>
+        </ul>
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <a href="#">What's new</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#">Chokers</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#">Necklaces</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#">Rings</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#">Earrings</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
-
   <main class="main">
-    <section class="main-picture">
-      <div class="main-picture__box">
+    <h1 class="visually-hidden">CH Jewellery Store</h1>
+    <div class="main__heading">
+      <div class="main__heading-img">
         <picture>
-          <source type="image/webp" media="(max-width: 767px)" srcset="img/backgrounds/bg-mobile.webp 1x, img/backgrounds/bg-mobile@2x.webp 2x">
-          <source media="(max-width: 767px)" srcset="img/backgrounds/bg-mobile.jpg 1x, img/backgrounds/bg-mobile@2x.jpg 2x">
-          <source type="image/webp" media="(max-width: 1023px)" srcset="img/backgrounds/bg-tablet.webp 1x, img/backgrounds/bg-tablet@2xwebp 2x">
-          <source media="(max-width: 1023px)" srcset="img/backgrounds/bg-tablet.jpg 1x, img/backgrounds/bg-tablet@2x.jpg 2x">
-          <source type="image/webp" srcset="img/backgrounds/bg-desktop.webp 1x, img/backgrounds/bg-desktop@2x 2x">
-          <img src="img/backgrounds/bg-desktop.jpg" srcset="img/backgrounds/bg-desktop@2x.jpg 2x" width="1366" height="463" alt="Background image">
+          <source srcset="img/desktop-bg1x.webp 1x, img/desktop-bg2x.webp 2x" type="image/webp">
+          <!-- 1x: 1366px; 2x: 2732px -->
+          <img src="img/desktop-bg1x.png" srcset="img/desktop-bg2x.png 2x" width="1366" height="463"
+            alt="Цепочки и кольца модели" loading="lazy">
         </picture>
-        <div class="main-picture__title">
-          <h1>Perfection</h1>
-          <p>made to be yours</p>
-        </div>
       </div>
-    </section>
+      <div class="main__heading-text">
+        <p>Perfection</p>
+        <span>made to be yours</span>
+      </div>
+    </div>
     <section class="main__swiper swiper">
       <h2 class="swiper__title">New In</h2>
-      <a class="swiper__link link">Shop Now</a>
+      <a class="swiper__link link" href="catalog.html">Shop Now</a>
       <div class="swiper-container mySwiper">
         <div class="swiper-button-prev">
           <svg width="30" height="11" viewBox="0 0 30 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
             focusable="false">
-            <use xlink:href="img/sprite.svg#left-arrow"></use>
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
           </svg>
         </div>
         <div class="swiper-button-next">
           <svg width="30" height="11" viewBox="0 0 30 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
             focusable="false">
-            <use xlink:href="img/sprite.svg#right-arrow"></use>
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
           </svg>
         </div>
         <div class="swiper-wrapper">
@@ -130,8 +117,13 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/items/item01.webp 1x, img/item/item01@2x.webp 2x" type="image/webp">
-                  <img src="img/items/item01.jpg" srcset="img/items/item01@2x.jpg 2x" width="270" height="284" alt="">
+                  <source
+                    srcset="img/purple-gemstone-necklace-desktop@1x.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/purple-gemstone-necklace-desktop@1x.jpg"
+                    srcset="img/purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284"
+                    alt="Ожерелье с аметистом" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -144,8 +136,13 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/items/item02.webp 1x, img/item/item02@2x.webp 2x" type="image/webp">
-                  <img src="img/items/item02.jpg" srcset="img/items/item02@2x.jpg 2x" width="270" height="284" alt="">
+                  <source
+                    srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/layered-choker-necklace-desktop.jpg"
+                    srcset="img/layered-choker-necklace-desktop@2x.jpg 2x" width="270" height="284"
+                    alt="Чокер с несколькими слоями" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -158,8 +155,11 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/items/item03.webp 1x, img/item/item03@2x.webp 2x" type="image/webp">
-                  <img src="img/items/item03.jpg" srcset="img/items/item03@2x.jpg 2x" width="270" height="284" alt="">
+                  <source srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/dainty-gold-necklace-desktop.jpg" srcset="img/dainty-gold-necklace-desktop@2x.jpg 2x"
+                    width="270" height="284" alt="Золотая цепочка" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -172,8 +172,11 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/items/item04.webp 1x, img/item/item04@2x.webp 2x" type="image/webp">
-                  <img src="img/items/item04.jpg" srcset="img/items/item04@2x.jpg 2x" width="270" height="284" alt="">
+                  <source srcset="img/galaxy-earrings-desktop-1.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/galaxy-earrings-desktop-1.jpg" srcset="img/galaxy-earrings-desktop@2x.jpg 2x"
+                    width="270" height="284" alt="Серьги с камнями цвета космоса" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -186,8 +189,11 @@
             <a class="swiper-slide__link card-link" href="product.html">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/catalog/product01.webp 1x, img/catalog/product01@2x.webp 2x" type="image/webp">
-                  <img src="img/catalog/product01.jpg" srcset="img/catalog/product01@2x.jpg 2x" width="270" height="284" alt="">
+                  <source srcset="img/necklace-detaildesktop.webp 1x, img/necklace-detaildesktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/necklace-detaildesktop.jpg" srcset="img/necklace-detaildesktop@2x.jpg 2x" width="270"
+                    height="284" alt="Золотая цепочка с подвесками и камнями" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -200,8 +206,13 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/catalog/product02.webp 1x, img/catalog/product02@2x.webp 2x" type="image/webp">
-                  <img src="img/catalog/product02.jpg" srcset="img/catalog/product02@2x.jpg 2x" width="270" height="284" alt="">
+                  <source
+                    srcset="img/black-choker-gold-bead-desktop.webp 1x, img/black-choker-gold-bead-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/black-choker-gold-bead-desktop.jpg"
+                    srcset="img/black-choker-gold-bead-desktop@2x.jpg 2x" width="270" height="284"
+                    alt="Черный чокер с золотой подвеской" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -214,8 +225,12 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/catalog/product03.webp 1x, img/catalog/product03@2x.webp 2x" type="image/webp">
-                  <img src="img/catalog/product03.jpg" srcset="img/catalog/product03@2x.jpg 2x" width="270" height="284" alt="">
+                  <source
+                    srcset="img/gold-layered-necklace-desktop.webp 1x, img/gold-layered-necklace-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/gold-layered-necklace-desktop.jpg" srcset="img/gold-layered-necklace-desktop@2x.jpg 2x"
+                    width="270" height="284" alt="Каскадное золотое ожерелье" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -228,8 +243,12 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/catalog/product04.webp 1x, img/catalog/product04@2x.webp 2x" type="image/webp">
-                  <img src="img/catalog/product04.jpg" srcset="img/catalog/product04@2x.jpg 2x" width="270" height="284" alt="">
+                  <source
+                    srcset="img/blue-gemstone-pendant-desktop.webp 1x, img/blue-gemstone-pendant-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/blue-gemstone-pendant-desktop.jpg" srcset="blue-gemstone-pendant-desktop@2x.jpg 2x"
+                    width="270" height="284" alt="Кулон из голубого драгоценного камня" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -242,8 +261,11 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/catalog/product05.webp 1x, img/catalog/product05@2x.webp 2x" type="image/webp">
-                  <img src="img/catalog/product05.jpg" srcset="img/catalog/product05@2x.jpg 2x" width="270" height="284" alt="">
+                  <source srcset="img/boho-earrings-desktop.webp 1x, img/boho-earrings-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/boho-earrings-desktop.jpg" srcset="img/boho-earrings-desktop@2x.jpg 2x" width="270"
+                    height="284" alt="Серьги в богемском стиле" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -256,8 +278,11 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/catalog/product06.webp 1x, img/catalog/product06@2x.webp 2x" type="image/webp">
-                  <img src="img/catalog/product06.jpg" srcset="img/catalog/product06@2x.jpg 2x" width="270" height="284" alt="">
+                  <source srcset="img/bird-necklace-desktop.webp 1x, img/bird-necklace-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/bird-necklace-desktop.jpg" srcset="img/bird-necklace-desktop@2x.jpg 2x" width="270"
+                    height="284" alt="Золотое ожерелье с птицей" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -270,8 +295,13 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/catalog/product07.webp 1x, img/catalog/product07@2x.webp 2x" type="image/webp">
-                  <img src="img/catalog/product07.jpg" srcset="img/catalog/product07@2x.jpg 2x" width="270" height="284" alt="">
+                  <source
+                    srcset="img/black-leather-choker-necklace-desktop.webp 1x, img/black-leather-choker-necklace-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/black-leather-choker-necklace-desktop.jpg"
+                    srcset="img/black-leather-choker-necklace-desktop@2x.jpg 2x" width="270" height="284"
+                    alt="Кожаный чокер черного цвета" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -284,8 +314,11 @@
             <a class="swiper-slide__link card-link" href="#">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source srcset="img/catalog/product09.webp 1x, img/catalog/product09@2x.webp 2x" type="image/webp">
-                  <img src="img/catalog/product09.jpg" srcset="img/catalog/product09@2x.jpg 2x" width="270" height="284" alt="">
+                  <source srcset="img/elephant-earrings-desktop.webp 1x, img/elephant-earrings-desktop@2x.webp 2x"
+                    type="image/webp">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/elephant-earrings-desktop.jpg" srcset="img/elephant-earrings-desktop@2x.jpg 2x"
+                    width="270" height="284" alt="Серьги в виде слоников" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -298,158 +331,192 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
-    <section class="main__blog blog">
-      <div class="container">
-        <h2 class="blog__title">Blog</h2>
-        <a class="blog__link" href="#">Read All</a>
-        <ul class="blog__list">
-          <li class="blog__item">
-            <div class="blog__item-picture">
-              <img src="img/blog/blog-picture-desktop01.jpg" alt="">
-            </div>
-            <div class="blog__item-description">
-              <p>September 30, 2019</p>
-              <h3>How to care for your jewellery</h3>
-              <a href="#">Read Article</a>
-            </div>
-          </li>
-          <li class="blog__item">
-            <div class="blog__item-picture">
-              <img src="img/blog/blog-picture-desktop02.jpg" alt="">
-            </div>
-            <div class="blog__item-description">
-              <p>September 23, 2019</p>
-              <h3>Power of crystals</h3>
-              <a href="#">Read Article</a>
-            </div>
-          </li>
-          <li class="blog__item">
-            <div class="blog__item-picture">
-              <img src="img/blog/blog-picture-desktop03.jpg" alt="">
-            </div>
-            <div class="blog__item-description">
-              <p>September 16, 2019</p>
-              <h3>AW 19 trends</h3>
-              <a href="#">Read Article</a>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <section class="main__blog blog container">
+      <h2 class="blog__title">Blog</h2>
+      <a class="blog__link link" href="#">Read All</a>
+      <ul class="blog__list">
+        <li class="blog__item">
+          <div class="blog__img-box">
+            <picture>
+              <source
+                srcset="img/jess-harper-sunday-b5NwJj4bVcg-unsplash-blog-care-desktop.webp 1x, img/jess-harper-sunday-b5NwJj4bVcg-unsplash-blog-care-desktop@2x.webp 2x"
+                type="image/webp">
+              <!-- 1x: 285px; 2x: 570px -->
+              <img src="img/jess-harper-sunday-b5NwJj4bVcg-unsplash-blog-care-desktop.jpg"
+                srcset="img/jess-harper-sunday-b5NwJj4bVcg-unsplash-blog-care-desktop@2x.jpg 2x" width="285"
+                height="300" alt="Золотые украшения" loading="lazy">
+            </picture>
+          </div>
+          <div class="blog__card">
+            <p>September 30, 2019</p>
+            <h3 class="blog__card-title">How to care for your jewellery</h3>
+            <a class="blog__card-link link" href="#">Read Article</a>
+          </div>
+        </li>
+        <li class="blog__item blog__item--crystal">
+          <div class="blog__img-box blog__img-box--crystal">
+            <picture>
+              <source
+                srcset="img/alex-holyoake-Cg0dPdmy5dE-unsplash-blog-power-desktop.webp 1x, img/alex-holyoake-Cg0dPdmy5dE-unsplash-blog-power-desktop@2x.webp 2x"
+                type="image/webp">
+              <!-- 1x: 285px; 2x: 570px -->
+              <img src="img/alex-holyoake-Cg0dPdmy5dE-unsplash-blog-power-desktop.jpg"
+                srcset="img/alex-holyoake-Cg0dPdmy5dE-unsplash-blog-power-desktop@2x.jpg 2x" width="285" height="300"
+                alt="Украшения с камнями" loading="lazy">
+            </picture>
+          </div>
+          <div class="blog__card">
+            <p>September 23, 2019</p>
+            <h3 class="blog__card-title">Power of<br> crystals</h3>
+            <a class="blog__card-link link" href="#">Read Article</a>
+          </div>
+        </li>
+        <li class="blog__item blog__item--big">
+          <div class="blog__img-box blog__img-box--big">
+            <picture>
+              <source
+                srcset="img/alve-odonnell-RP4_f4zu_8A-unsplash-blog-trends-desktop.webp 1x, img/alve-odonnell-RP4_f4zu_8A-unsplash-blog-trends-desktop@2x.webp 2x"
+                type="image/webp">
+              <!-- 1x: 570px; 2x: 1140px -->
+              <img src="img/alve-odonnell-RP4_f4zu_8A-unsplash-blog-trends-desktop.jpg"
+                srcset="img/alve-odonnell-RP4_f4zu_8A-unsplash-blog-trends-desktop@2x.jpg 2x" width="570" height="630"
+                alt="Девушка с кольцами и браслетом на руке" loading="lazy">
+            </picture>
+          </div>
+          <div class="blog__card">
+            <p>September 16, 2019</p>
+            <h3 class="blog__card-title">AW 19 trends</h3>
+            <a class="blog__card-link link" href="#">Read Article</a>
+          </div>
+        </li>
+      </ul>
     </section>
-    <section class="faq">
-      <div class="container">
-        <h2 class="faq__title">Frequently asked questions</h2>
-        <ul class="faq__list">
-          <li class="faq__item accordion-item">
-            <div class="faq__item-title accordion-item-title">
-              <h3>What materials are the jewellery made of?</h3>
-            </div>
-            <div class="faq__item-body accordion-item-content">
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-            </div>
-          </li>
-          <li class="faq__item accordion-item">
-            <div class="faq__item-title accordion-item-title">
-              <h3>Which countries do you deliver to?</h3>
-            </div>
-            <div class="faq__item-body accordion-item-content">
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-            </div>
-          </li>
-          <li class="faq__item accordion-item">
-            <div class="faq__item-title accordion-item-title">
-              <h3>What are the payment methods?</h3>
-            </div>
-            <div class="faq__item-body accordion-item-content">
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-            </div>
-          </li>
-          <li class="faq__item accordion-item">
-            <div class="faq__item-title accordion-item-title">
-              <h3>Can I return the jewellery if it didn’t fit me?</h3>
-            </div>
-            <div class="faq__item-body accordion-item-content">
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <section class="main__faq faq container">
+      <h2 class="faq__title">Frequently asked questions</h2>
+      <ul class="faq__accordeon accordeon accordeon-no-js">
+        <li class="faq__item accordeon__item">
+          <button class="faq__button accordeon__button" type="button">What materials are<br> the jewellery made
+            of?</button>
+          <div class="faq__panel accordeon__panel">
+            <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+              semiprecious stones and crystals.</p>
+          </div>
+        </li>
+        <li class="faq__item accordeon__item">
+          <button class="faq__button accordeon__button" type="button">Which countries<br> do you deliver to?</button>
+          <div class="faq__panel accordeon__panel">
+            <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+              semiprecious stones and crystals.</p>
+          </div>
+        </li>
+        <li class="faq__item accordeon__item">
+          <button class="faq__button accordeon__button" type="button">What are the<br> payment methods?</button>
+          <div class="faq__panel accordeon__panel">
+            <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+              semiprecious stones and crystals.</p>
+          </div>
+        </li>
+        <li class="faq__item accordeon__item">
+          <button class="faq__button accordeon__button" type="button">Can I return the<br> jewellery if it didn’t fit
+            me?</button>
+          <div class="faq__panel accordeon__panel">
+            <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+              semiprecious stones and crystals.</p>
+          </div>
+        </li>
+      </ul>
     </section>
-    <section class="insta">
-      <div class="container">
-        <h2 class="insta__title">@Chjewellery</h2>
-        <a class="insta__link" href="#">Follow Us</a>
-        <ul class="insta__list">
-          <li class="insta__item">
-            <div class="insta__img-box">
-              <picture>
-                <img src="img/insta/inst-desktop01.jpg" width="230" height="230" alt="">
-              </picture>
-            </div>
-          </li>
-          <li class="insta__item">
-            <div class="insta__img-box">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/insta/insta-mobile.webp 1x, img/insta/insta-mobile@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="img/insta/insta-mobile.jpg 1x, img/insta/insta-mobile@2x.jpg 2x">
-                <img src="img/insta/inst-desktop02.jpg" width="400" height="412" alt="">
-              </picture>
-            </div>
-          </li>
-          <li class="insta__item">
-            <div class="insta__img-box">
-              <picture>
-                <img src="img/insta/inst-desktop03.jpg" width="230" height="230" alt="">
-              </picture>
-            </div>
-          </li>
-          <li class="insta__item">
-            <div class="insta__img-box">
-              <picture>
-                <img src="img/insta/inst-desktop04.jpg" width="230" height="230" alt="">
-              </picture>
-            </div>
-          </li>
-          <li class="insta__item">
-            <div class="insta__img-box">
-              <picture>
-                <img src="img/insta/inst-desktop05.jpg" width="230" height="150" alt="">
-              </picture>
-            </div>
-          </li>
-          <li class="insta__item">
-            <div class="insta__img-box">
-              <picture>
-                <img src="img/insta/insta-desktop06.jpg" width="230" height="150" alt="">
-              </picture>
-            </div>
-          </li>
-          <li class="insta__item">
-            <div class="insta__img-box">
-              <picture>
-                <img src="img/insta/insta-desktop07.jpg" width="230" height="150" alt="">
-              </picture>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <section class="main__insta insta container">
+      <h2 class="insta__title">@Chjewellery</h2>
+      <a class="insta__link link" href="#">Follow Us</a>
+      <ul class="insta__list">
+        <li class="insta__item">
+          <div class="insta__img-box">
+            <picture>
+              <source srcset="img/8-inst-1-desktop.webp 1x, img/8-inst-1-desktop@2x.webp 2x" type="image/webp">
+              <!-- 1x: 230px; 2x: 460px -->
+              <img src="img/8-inst-1-desktop.jpg" srcset="img/8-inst-1-desktop@2x.jpg 2x" width="230" height="230"
+                alt="Серьги золотые квадратные" loading="lazy">
+            </picture>
+          </div>
+        </li>
+        <li class="insta__item insta__item--big">
+          <div class="insta__img-box">
+            <picture>
+              <source srcset="img/2desktop.webp 1x, img/2desktop@2x.webp 2x" type="image/webp">
+              <!-- 1x: 399px; 2x: 798px -->
+              <img src="img/2desktop.jpg" srcset="img/2desktop@2x.jpg 2x" width="399" height="412"
+                alt="Девушка с серьгами на ушах" loading="lazy">
+            </picture>
+          </div>
+        </li>
+        <li class="insta__item insta__item--hide">
+          <div class="insta__img-box">
+            <picture>
+              <source srcset="img/4desktop.webp 1x, img/4desktop@2x.webp 2x" type="image/webp">
+              <!-- 1x: 230px; 2x: 460px -->
+              <img src="img/4desktop.jpg" srcset="img/4desktop@2x.jpg 2x" width="230" height="230"
+                alt="Браслеты и кольцо на руках" loading="lazy">
+            </picture>
+          </div>
+        </li>
+        <li class="insta__item insta__item--hide">
+          <div class="insta__img-box">
+            <picture>
+              <source srcset="img/6desktop.webp 1x, img/6desktop@2x.webp 2x" type="image/webp">
+              <!-- 1x: 230px; 2x: 460px -->
+              <img src="img/6desktop.jpg" srcset="img/6desktop@2x.jpg 2x" width="230" height="230"
+                alt="Золотые серьги-кольца" loading="lazy">
+            </picture>
+          </div>
+        </li>
+        <li class="insta__item">
+          <div class="insta__img-box">
+            <picture>
+              <source srcset="img/1-inst-1-desktop.webp 1x, img/1-inst-1-desktop@2x.webp 2x" type="image/webp">
+              <!-- 1x: 230px; 2x: 460px -->
+              <img src="img/1-inst-1-desktop.jpg" srcset="img/1-inst-1-desktop@2x.jpg 2x" width="230" height="150"
+                alt="Висячие серьги с камнями" loading="lazy">
+            </picture>
+          </div>
+        </li>
+        <li class="insta__item">
+          <div class="insta__img-box">
+            <picture>
+              <source srcset="img/5desktop.webp 1x, img/5desktop@2x.webp 2x" type="image/webp">
+              <!-- 1x: 230px; 2x: 460px -->
+              <img src="img/5desktop.jpg" srcset="img/5desktop@2x.jpg 2x" width="230" height="150"
+                alt="Золотые ожерелье, кольцо и серьги с камнями" loading="lazy">
+            </picture>
+          </div>
+        </li>
+        <li class="insta__item">
+          <div class="insta__img-box">
+            <picture>
+              <source srcset="img/7desktop.webp 1x, img/7desktop@2x.webp 2x" type="image/webp">
+              <!-- 1x: 230px; 2x: 460px -->
+              <img src="img/7desktop.jpg" srcset="img/7desktop@2x.jpg 2x" width="230" height="150"
+                alt="Девушка с кольцами на руках" loading="lazy">
+            </picture>
+          </div>
+        </li>
+      </ul>
     </section>
   </main>
-
   <footer class="footer">
-    <div class="footer__container container">
+    <div class="container">
       <div class="footer__subscription">
-        <h2>The good stuff in your inbox</h2>
+        <h2 class="footer__title">The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form method="POST">
-          <div class="footer__subscribtion-form">
+        <form method="get">
+          <div class="footer__subscription-form">
             <div class="footer__subscription-email">
-              <input id="your-email" type="text" placeholder="Your E-mail">
-              <label for="your-email"></label>
+              <label for="email"></label>
+              <input type="email" name="email" id="email" placeholder="Your E-mail" required>
             </div>
-            <button class="footer__button-signup" type="submit">Sign Up
-              <svg width="29" height="9">
-                <use xlink:href="img/sprite.svg#right-arrow"></use>
+            <button class="footer__subscription-signup" type="submit">Sign Up
+              <svg width="30" height="11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-arrow"></use>
               </svg>
             </button>
           </div>
@@ -468,7 +535,7 @@
         <li class="footer__info-item">
           <a href="#">Delivery</a>
         </li>
-        <li class="footer__info-item">
+        <li class="footer__info-item footer__info-item--about">
           <a href="#">About CH</a>
         </li>
         <li class="footer__info-item">
@@ -482,42 +549,88 @@
         </li>
       </ul>
       <ul class="footer__social-list">
-        <li class="footer__social-item footer__social-item--facebook">
+        <li class="footer__social-item">
           <a href="#">
-            <svg width="14" height="14">
-              <use xlink:href="img/sprite.svg#facebook"></use>
+            <svg width="8" height="15" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              focusable="false">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
             <span>Facebook</span>
           </a>
         </li>
-        <li class="footer__social-item footer__social-item--instagram">
+        <li class="footer__social-item">
           <a href="#">
-            <svg width="14" height="14">
-              <use xlink:href="img/sprite.svg#instagram"></use>
+            <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              focusable="false">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg>
             <span>Instagram</span>
           </a>
         </li>
-        <li class="footer__social-item footer__social-item--pinterest">
+        <li class="footer__social-item">
           <a href="#">
-            <svg width="14" height="14">
-              <use xlink:href="img/sprite.svg#pinterest"></use>
+            <svg width="16" height="15" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              focusable="false">
+              <use xlink:href="img/sprite.svg#icon-pinterest"></use>
             </svg>
             <span>Pinterest</span>
           </a>
         </li>
-        <li class="footer__social-item footer__social-item--twitter">
+        <li class="footer__social-item">
           <a href="#">
-            <svg width="14" height="14">
-              <use xlink:href="img/sprite.svg#twitter"></use>
+            <svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              focusable="false">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
-            <span>Twittwer</span>
+            <span>Twitter</span>
+          </a>
         </li>
       </ul>
     </div>
   </footer>
-  </div>
+  <section class="login-modal modal">
+    <div class="login-modal__overlay modal__overlay ">
+      <div class="login-modal__window modal__window">
+        <div class="login-modal__img-box">
+          <picture>
+            <source
+              srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.webp 1x, img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.webp 2x"
+              type="image/webp">
+            <!-- 1x: 430px; 2x: 860px -->
+            <img src="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.jpg"
+              srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.jpg 2x" width="430" height="138"
+              alt="Золотые украшения с бусинами" loading="lazy">
+          </picture>
+        </div>
+        <div class="login-modal__wrapper">
+          <h2>Log In</h2>
+          <form method="get">
+            <div class="login-modal__input login-modal__input--email">
+              <label for="modal-email"></label>
+              <input type="email" name="modal-email" id="modal-email" placeholder="Your E-mail" required>
+            </div>
+            <div class="login-modal__input login-modal__input--password">
+              <label for="modal-password"></label>
+              <input type="password" name="modal-password" id="modal-password" placeholder="Password" required>
+            </div>
+            <a class="login-modal__forgotpassword" href="#">Forgot your password?</a>
+            <button class="login-modal__submit button" type="submit">Log In</button>
+            <div class="login-modal__text">
+              <p>Don’t have an account?</p>
+              <a class="login-modal__signup" href="#">Sign up</a>
+            </div>
+          </form>
+        </div>
+        <button class="login-modal__close modal__close" type="button" aria-label="Close window">
+          <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
   <script src="js/vendor.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>

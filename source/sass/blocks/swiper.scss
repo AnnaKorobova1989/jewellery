@@ -9,35 +9,14 @@
 }
 
 .swiper__title {
+  @include heading-style;
   margin-bottom: 25px;
   text-align: center;
-  font-family: "Cormorant Bold";
-  font-weight: bold;
-  font-size: 34px;
-  margin: 0;
-  padding: 0;
 }
 
 .swiper__link {
-  font-family: "Poppins Medium";
-  font-weight: 500;
-  font-size: 16px;
-  display: block;
-  position: relative;
-  width: fit-content;
-  margin: 0 auto;
-  padding-bottom: 0px;
-  padding-top: 20px;
-
   &::after {
-    position: absolute;
-    content: "";
-    left: 50%;
-    bottom: 0;
     width: 80px;
-    height: 1px;
-    transform: translateX(-50%);
-    background-color: $gold-color;
   }
 }
 
@@ -50,16 +29,16 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: -49px;
+  top: -60px;
   cursor: pointer;
 
   &:hover svg,
   &:focus svg {
-    stroke: $total-black;
+    stroke: $basic-dark;
   }
 
   &:active svg {
-    stroke: $total-black;
+    stroke: $basic-dark;
     opacity: 0.7;
   }
 }
@@ -74,7 +53,12 @@
 
 .swiper-button-prev svg,
 .swiper-button-next svg {
-  stroke: $gold-color;
+  @include transition;
+  stroke: $light-brown;
+}
+
+.swiper-button-prev svg {
+  transform: rotate(180deg);
 }
 
 .swiper-wrapper {
@@ -82,7 +66,6 @@
   justify-content: flex-start;
   width: auto;
   margin-bottom: 54px;
-  margin-top: 10px;
 }
 
 .swiper-slide {
@@ -91,11 +74,6 @@
   width: 270px;
   text-align: center;
   margin-right: 30px;
-
-  a {
-    @include link-reset;
-  }
-
 }
 
 .swiper-slide__img-box {
@@ -106,22 +84,20 @@
 }
 
 .swiper-slide__description {
-  margin: 18px auto 0;
+  @include transition;
+  margin: 22px auto 0;
 }
 
 .swiper-slide__description h3 {
-  font-family: "Poppins Medium";
   margin: 0 0 5px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 130%;
-  color: $total-black;
+  line-height: 20.8px;
 }
 
 .swiper-slide__description p {
-  font-family: "Poppins Bold";
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 18.2px;
 
@@ -134,49 +110,44 @@
   width: fit-content;
   margin: 0 auto;
   font-weight: 500;
-  color: $grey;
-  padding-left: 12px;
-  margin-top: -4px;
+  color: $basic-grey;
 }
 
 .swiper-pagination-bullet {
-  font-family: "Poppins Medium";
-  font-weight: 500;
-  font-size: 16px;
+  @include transition;
   margin-right: 15px;
   cursor: pointer;
-  margin-right: 13px;
 
   &:hover,
   &:focus {
-    color: $gold-color;
+    color: $light-brown;
   }
 
   &:active {
-    color: $gold-color;
+    color: $light-brown;
     opacity: 0.7;
   }
 }
 
 .swiper-pagination-bullet-active {
-  color: $total-black;
+  color: $basic-dark;
   cursor: default;
 
   &:hover,
   &:focus,
   &:active {
-    color: $total-black;
+    color: $basic-dark;
   }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-breakpoint) {
   .swiper {
     width: 88%;
-    padding: 67px 0 65px;
+    padding: 70px 0 65px;
   }
 
   .swiper__title {
-    margin-bottom: 0px;
+    margin-bottom: 21px;
   }
 
   .swiper__link {
@@ -184,7 +155,7 @@
   }
 
   .swiper-container {
-    padding-top: 37px;
+    padding-top: 50px;
   }
 
   .swiper-button-prev,
@@ -213,14 +184,10 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: $mobile-breakpoint) {
   .swiper {
     width: 90%;
-    padding: 58px 0 60px;
-  }
-
-  .swiper__link {
-    padding-bottom: 1px;
+    padding: 60px 0 55px;
   }
 
   .swiper-button-prev,
@@ -229,7 +196,7 @@
   }
 
   .swiper-container {
-    padding-top: 28px;
+    padding-top: 40px;
   }
 
   .swiper-wrapper {
@@ -246,6 +213,6 @@
   }
 
   .swiper-pagination {
-    color: $total-black;
+    color: $basic-dark;
   }
 }

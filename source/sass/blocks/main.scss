@@ -1,0 +1,130 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.main__heading {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 463px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(86, 64, 52, 0.7);
+  }
+
+  &--catalog {
+    min-height: 261px;
+  }
+}
+
+.main__heading-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 463px;
+  padding: 182px 350px 60px;
+}
+
+.main__heading-img,
+.main__heading-img--catalog {
+  img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+  }
+}
+
+.main__heading-text--catalog {
+  min-height: 261px;
+  padding: 92px 130px 50px;
+}
+
+.main__heading-text p,
+.main__heading-text span {
+  text-align: center;
+  color: $basic-white;
+  letter-spacing: 1.5px;
+}
+
+.main__heading-text p {
+  @include heading-style;
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58.5px;
+  text-transform: uppercase;
+}
+
+.main__heading-text span {
+  display: block;
+  font-family: $heading-font-family;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 0;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.main__heading-text--catalog p {
+  font-size: 34px;
+  line-height: 44.2px;
+}
+
+.main__heading-text--catalog span {
+  font-size: 22px;
+  line-height: 28.6px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .main__heading-text {
+    padding: 179px 119px 70px 100px;
+  }
+
+  .main__heading-text--catalog {
+    padding: 92px 60px 40px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .main__heading-text {
+    padding: 187px 40px;
+  }
+
+  .main__heading-text--catalog {
+    padding: 80px 20px 30px;
+  }
+
+  .main__heading-text p {
+    margin-bottom: 16px;
+    font-size: 38px;
+    line-height: 49.4px;
+  }
+
+  .main__heading-text span {
+    font-size: 30px;
+    line-height: 0;
+  }
+
+  .main__heading-text--catalog p {
+    font-size: 34px;
+    line-height: 44.2px;
+  }
+
+  .main__heading-text--catalog span {
+    font-size: 22px;
+    line-height: 26.4px;
+  }
+}

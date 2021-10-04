@@ -4,43 +4,6 @@
   margin-right: 50px;
 }
 
-.filter__list {
-  padding-top: 25px;
-}
-
-.filter__list-big {
-  @include list-reset;
-  border: 1px solid $gold-color;
-  max-width: 250px;
-}
-
-.filter__item-big:not(:last-child) {
-  border-bottom: 1px solid $gold-color;
-}
-
-.filter__item-body {
-  padding-left: 35px;
-  padding-bottom: 30px;
-}
-
-.filter__item-title {
-  padding-bottom: 25px;
-
-  h3 {
-    padding-bottom: 14px;
-    padding-top: 7px;
-  }
-}
-
-.filter__item {
-  font-family: "Poppins Medium";
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 130%;
-  margin: 0;
-  padding: 0;
-}
-
 .filter__close {
   display: none;
 }
@@ -58,7 +21,7 @@
 
 .filter__item-title,
 .filter__name {
-  padding: 16px 25px 21px;
+  padding: 24px 25px 21px;
   font-size: 16px;
   line-height: 20.8px;
 
@@ -66,17 +29,6 @@
     top: 45%;
     right: 25px;
   }
-}
-
-.filter__item-title h3 {
-  font-family: "Poppins Medium";
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
-  margin: 0;
-  padding: 0;
-  padding-top: 7px;
-  padding-bottom: 0;
 }
 
 .filter__panel {
@@ -93,8 +45,7 @@
 }
 
 .filter__list {
-  @include list-reset;
-  padding-top: 27px;
+  @include list-style;
 }
 
 .filter__item {
@@ -104,6 +55,7 @@
 }
 
 .filter__item label {
+  @include transition;
   position: relative;
   padding-left: 25px;
   font-weight: 500;
@@ -113,7 +65,7 @@
 
   &:hover,
   &:focus {
-    color: $gold-color;
+    color: $light-brown;
   }
 
   &:active {
@@ -128,19 +80,19 @@
     left: 0;
     width: 15px;
     height: 15px;
-    border: 1px solid $gold-color;
+    border: 1px solid $light-brown;
     box-sizing: border-box;
   }
 }
 
 .filter__item input {
   &:checked + label::before {
-    background-color: $gold-color;
+    background-color: $light-brown;
   }
 
   &:focus + label::before,
   &:checked:focus + label::before {
-    box-shadow: 0 0 0 2px $gold-color;
+    box-shadow: 0 0 0 2px $light-brown;
   }
 
   &:active + label::before,
@@ -152,62 +104,18 @@
 .filter__submit {
   margin-bottom: 25px;
   color: $basic-white;
-  background-color: $gold-color;
-  width: 250px;
-  height: 68px;
-  padding: 0;
-  border: none;
-  box-sizing: border-box;
-  font-family: "Poppins Medium";
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20.8px;
-  cursor: pointer;
-  margin-top: 20px;
-
-  &:hover,
-  &:focus {
-    color: $basic-white;
-    background-color: $total-black;
-    border: 1px solid $total-black;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
+  background-color: $light-brown;
 }
 
 .filter__reset {
-  color: $total-black;
+  color: $basic-dark;
   background-color: $basic-white;
-  width: 250px;
-  height: 68px;
-  padding: 0;
-  border: none;
-  box-sizing: border-box;
-  font-family: "Poppins Medium";
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20.8px;
-  cursor: pointer;
-  border: 1px solid $gold-color;
-
-  &:hover,
-  &:focus {
-    color: $basic-white;
-    background-color: $total-black;
-    border: 1px solid $total-black;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
+  border: 1px solid $light-brown;
 }
 
 .filter__price {
   position: relative;
   height: 35px;
-  margin-top: 26px;
 }
 
 .filter__price input {
@@ -253,7 +161,7 @@
   left: 25%;
   bottom: 0;
   right: 25%;
-  background-color: $gold-color;
+  background-color: $light-brown;
   z-index: 2;
 }
 
@@ -263,7 +171,7 @@
   height: 15px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: $gold-color;
+  background-color: $light-brown;
   border-radius: 50%;
   z-index: 3;
 
@@ -278,7 +186,7 @@
 
 .filter__price-number {
   background: transparent;
-  color: $total-black;
+  color: $basic-dark;
   position: absolute;
   margin-top: 17px;
   font-weight: 500;
@@ -286,7 +194,7 @@
   line-height: 18.2px;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-breakpoint) {
   .filter {
     position: absolute;
     top: 0;
@@ -310,7 +218,7 @@
 
     &:nth-of-type(n) {
       border: none;
-      border-bottom: 1px solid $gold-color;
+      border-bottom: 1px solid $light-brown;
     }
   }
 
@@ -331,7 +239,7 @@
     padding: 0;
     border-radius: 50%;
     border: none;
-    background-color: $total-black;
+    background-color: $basic-dark;
     outline: none;
     cursor: pointer;
     transition-property: all;
@@ -339,7 +247,7 @@
 
     &:hover,
     &:focus {
-      background-color: $gold-color;
+      background-color: $light-brown;
     }
 
     &:active {
@@ -378,7 +286,7 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: $mobile-breakpoint) {
   .filter__wrapper {
     width: 84%;
     margin: 76px auto 60px;
