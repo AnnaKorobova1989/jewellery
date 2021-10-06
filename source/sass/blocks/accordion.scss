@@ -1,4 +1,4 @@
-.accordeon__item {
+.accordion__item {
   border: 1px solid $light-brown;
 
   &:not(:last-of-type) {
@@ -6,7 +6,7 @@
   }
 }
 
-.accordeon__button {
+.accordion__button {
   @include transition;
   position: relative;
   width: 100%;
@@ -41,7 +41,7 @@
   }
 }
 
-.accordeon-no-js .accordeon__button {
+.accordion-no-js .accordion__button {
   cursor: default;
 
   &::after {
@@ -62,7 +62,7 @@
 }
 
 @media (max-width: $tablet-breakpoint) {
-  .accordeon__button {
+  .accordion__button {
     &::after {
       width: 23px;
       height: 12px;

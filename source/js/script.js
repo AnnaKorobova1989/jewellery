@@ -1,29 +1,32 @@
 'use strict';
 
 (function () {
-  const accordeon = document.querySelectorAll('.accordeon');
-  const accordeonButton = document.querySelectorAll('.accordeon__button');
+  if (document.querySelectorAll('.accordion,' +
+  '.accordion__button')) {
+    const accordion = document.querySelectorAll('.accordion');
+    const accordionButton = document.querySelectorAll('.accordion__button');
 
-  accordeon.forEach(function (acc) {
-    acc.classList.remove('accordeon-no-js');
-  })
+    accordion.forEach(function (acc) {
+      acc.classList.remove('accordion-no-js');
+    })
 
-  function hideAll() {
-    accordeonButton.forEach(function (acc) {
-      acc.classList.remove('active-item');
-      acc.nextElementSibling.classList.remove('show');
+    function hideAll() {
+      accordionButton.forEach(function (acc) {
+        acc.classList.remove('active-item');
+        acc.nextElementSibling.classList.remove('show');
+      });
+    }
+
+    accordionButton.forEach(function (acc) {
+      acc.addEventListener('click', function () {
+        if (acc != this) {
+          hideAll();
+        }
+        this.classList.toggle('active-item');
+        this.nextElementSibling.classList.toggle('show');
+      })
     });
   }
-
-  accordeonButton.forEach(function (acc) {
-    acc.addEventListener('click', function () {
-      if (acc != this) {
-        hideAll();
-      }
-      this.classList.toggle('active-item');
-      this.nextElementSibling.classList.toggle('show');
-    })
-  });
 })();
 
 

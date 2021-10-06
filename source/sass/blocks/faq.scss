@@ -9,7 +9,7 @@
   margin-bottom: 48px;
 }
 
-.faq__accordeon {
+.faq__accordion {
   @include list-style;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
 }
 
 .faq__item .active-item,
-.accordeon-no-js .faq__button {
+.accordion-no-js .faq__button {
   padding-bottom: 7px;
 }
 
@@ -52,7 +52,7 @@
   padding: 0 395px 43px 50px;
 }
 
-.accordeon-no-js .faq__panel {
+.accordion-no-js .faq__panel {
   display: block;
 }
 
@@ -65,7 +65,7 @@
     margin-bottom: 45px;
   }
 
-  .faq__accordeon {
+  .faq__accordion {
     width: 100%;
   }
 
@@ -74,7 +74,7 @@
   }
 
   .faq__item .active-item,
-  .accordeon-no-js .faq__button {
+  .accordion-no-js .faq__button {
     padding-bottom: 26px;
   }
 
@@ -115,7 +115,7 @@
   }
 
   .faq__item .active-item,
-  .accordeon-no-js .faq__button {
+  .accordion-no-js .faq__button {
     padding-bottom: 15px;
   }
 
