@@ -104,7 +104,6 @@
   const loginLink = document.querySelector('.header__user-item--login');
   const loginModal = document.querySelector('.login-modal');
   const loginOverlay = document.querySelector('.login-modal__overlay');
-  // const loginWindow = document.querySelector('.login-modal__window');
   const loginClose = document.querySelector('.login-modal__close');
   const loginEmail = document.querySelector('#modal-email');
   const catalog = document.querySelector('.catalog');
