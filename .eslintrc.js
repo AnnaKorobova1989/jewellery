@@ -2,7 +2,7 @@ module.exports = {
   "env": {
     "browser": true
   },
-  "extends": "htmlacademy/es5",
+  "extends": "htmlacademy/vanilla",
   "rules": {
     "comma-dangle": [
       "error",

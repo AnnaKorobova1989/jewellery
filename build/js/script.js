@@ -149,7 +149,7 @@
       }
 
       const removeNoJs = function (overlay) {
-        overlay.classList.remove('modal__no-js');
+        overlay.classList.remove('modal-no-js');
       }
 
       const openModalWindow = function (overlay) {
