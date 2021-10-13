@@ -32,14 +32,14 @@
         </button>
       </div>
       <nav class="header__navigation">
-        <form method="post">
+        <form action="https://echo.htmlacademy.ru" method="post">
           <div class="header__navigation-search">
             <label for="search">
               <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#icon-lens"></use>
               </svg>
             </label>
-            <input type="text" name="search" id="search" placeholder="Type here to search">
+            <input type="search" name="search" id="search" placeholder="Type here to search">
           </div>
         </form>
         <ul class="header__user-list">
@@ -84,6 +84,10 @@
     <div class="main__heading main__heading--catalog">
       <div class="main__heading-img main__heading-img--catalog">
         <picture>
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/annicken-mobile.webp 1x, img/annicken-mobile@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/annicken-mobile.jpg 1x, img/annicken-mobile.jpg 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/annicken-desk.webp 1x, img/annicken-desk@2x.webp 2x">
+          <source media="(max-width: 1023px)" srcset="img/annicken-desk.jpg 1x, img/annicken-desk@2x.jpg 2x">
           <source srcset="img/catalog-bg.webp 1x, img/catalog-bg@2x.webp 2x" type="image/webp">
           <!-- 1x: 1366px; 2x: 2732px -->
           <img src="img/catalog-bg.png" srcset="img/catalog-bg@2x.png 2x" width="1366" height="261" alt="Серьги-кольца">
@@ -98,7 +102,7 @@
       <article class="catalog__filter filter">
         <h2 class="visually-hidden">Filter set</h2>
         <div class="filter__wrapper">
-          <form method="get">
+          <form action="https://echo.htmlacademy.ru" method="get">
             <div class="filter__accordion accordion accordion-no-js">
               <button class="filter__close">
                 <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -395,7 +399,7 @@
       <div class="footer__subscription">
         <h2 class="footer__title">The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form method="get">
+        <form action="https://echo.htmlacademy.ru" method="get">
           <div class="footer__subscription-form">
             <div class="footer__subscription-email">
               <label for="email"></label>
@@ -483,7 +487,7 @@
         </div>
         <div class="login-modal__wrapper">
           <h2>Log In</h2>
-          <form method="get">
+          <form action="https://echo.htmlacademy.ru" method="get">
             <div class="login-modal__input login-modal__input--email">
               <label for="modal-email"></label>
               <input type="email" name="modal-email" id="modal-email" placeholder="Your E-mail" required="">

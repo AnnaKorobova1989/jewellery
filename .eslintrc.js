@@ -2,6 +2,9 @@ module.exports = {
   "env": {
     "browser": true
   },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
   "extends": "htmlacademy/vanilla",
   "rules": {
     "comma-dangle": [
@@ -28,5 +31,5 @@ module.exports = {
     ],
     "no-console": "warn",
     "no-alert": "warn"
-  }
+  },
 }

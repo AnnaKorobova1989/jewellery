@@ -10,7 +10,12 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  min-height: 463px;
+  max-height: 463px;
+
+  img {
+    width: 100%;
+    max-height: 463px;
+  }
 
   &::before {
     position: absolute;
@@ -48,6 +53,11 @@
 .main__heading-text--catalog {
   min-height: 261px;
   padding: 92px 130px 50px;
+}
+
+.main__heading-img--catalog {
+  min-height: 261px;
+  width: 100%;
 }
 
 .main__heading-text p,
