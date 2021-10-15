@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-shadow */
 'use strict';
 
 (function () {
@@ -10,6 +12,7 @@
       acc.classList.remove('accordion-no-js');
     });
 
+    // eslint-disable-next-line no-inner-declarations
     function hideAll() {
       accordionButton.forEach((acc) => {
         acc.classList.remove('active-item');
@@ -31,6 +34,7 @@
 
 
 (function () {
+  // eslint-disable-next-line no-undef
   const swiper = new Swiper('.mySwiper', {
     slidesPerView: 2,
     spaceBetween: 30,
@@ -53,6 +57,7 @@
         pagination: {
           type: 'bullets',
           renderBullet: function (index, className) {
+            // eslint-disable-next-line prefer-template
             return '<span class="' + className + '">' + (index + 1) + '</span>';
           }
         }
@@ -64,6 +69,7 @@
         pagination: {
           type: 'bullets',
           renderBullet: function (index, className) {
+            // eslint-disable-next-line prefer-template
             return '<span class="' + className + '">' + (index + 1) + '</span>';
           }
         }
@@ -75,7 +81,7 @@
     },
   });
 
-  window.addEventListener('resize', function () {
+  window.addEventListener('resize', () => {
     swiper.pagination.update();
   });
 })();
@@ -89,7 +95,7 @@
 
     headerMain.classList.remove('header-no-js');
 
-    navToggleButton.addEventListener('click', function () {
+    navToggleButton.addEventListener('click', () => {
       if (headerMain.classList.contains('header-closed')) {
         headerMain.classList.remove('header-closed');
         headerMain.classList.add('header-opened');
@@ -116,11 +122,6 @@
     '.filter,' +
     '.catalog__filter-button,' +
     '.filter__close,' +
-    '.profile__add,' +
-    '.cart-modal,' +
-    '.cart-modal__overlay,' +
-    '.cart-modal__control--plus,' +
-    '.cart-modal__close,' +
     '.cart-count')) {
     const body = document.querySelector('body');
     const loginLink = document.querySelector('.header__user-item--login');
@@ -132,14 +133,9 @@
     const filter = document.querySelector('.filter');
     const filterOpenButton = document.querySelector('.catalog__filter-button');
     const filterCloseButton = document.querySelector('.filter__close');
-    const addButton = document.querySelector('.profile__add');
-    const cartModal = document.querySelector('.cart-modal');
-    const cartOverlay = document.querySelector('.cart-modal__overlay');
-    const cartPlus = document.querySelector('.cart-modal__control--plus');
-    const cartClose = document.querySelector('.cart-modal__close');
-    const cartCount = document.querySelector('.cart-count');
-    let count = 0;
+    // eslint-disable-next-line no-unused-vars
     let isStorageSupport = true;
+    // eslint-disable-next-line no-unused-vars
     let storageEmail = '';
 
     try {
@@ -156,6 +152,7 @@
       overlay.classList.add('modal-show');
       body.classList.add('fixed');
       body.style.width = '100%';
+      // eslint-disable-next-line no-use-before-define
       body.addEventListener('keydown', keyPressHandler);
     };
 
@@ -167,6 +164,7 @@
       if (overlay.classList.contains('modal-show')) {
         overlay.classList.remove('modal-show');
         body.classList.remove('fixed');
+        // eslint-disable-next-line no-use-before-define
         body.removeEventListener('keydown', keyPressHandler);
       }
     };
@@ -175,7 +173,7 @@
       if (evt.key === 'Escape' || evt.key === 'Esc') {
         evt.preventDefault();
 
-        closeModalWindow();
+        closeModalWindow(filter);
       }
     };
 
@@ -216,43 +214,6 @@
       }
     });
 
-    if (window.location.href.endsWith('product.html')) {
-      removeNoJs(cartOverlay);
-
-      addButton.addEventListener('click', (evt) => {
-        evt.stopPropagation();
-        evt.preventDefault();
-        openModalWindow(cartOverlay);
-        addModalShade(cartModal);
-        cartPlus.focus();
-        count = count + 1;
-        cartCount.innerHTML = count;
-      });
-
-      cartClose.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        closeModalWindow(cartOverlay);
-        removeModalShade(cartModal);
-      });
-
-      window.addEventListener('keydown', (evt) => {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          closeModalWindow(cartOverlay);
-          removeModalShade(cartModal);
-        }
-      });
-
-      cartOverlay.addEventListener('click', (evt) => {
-        if (evt.target.closest('.modal__window')) {
-          evt.stopPropagation();
-        } else {
-          closeModalWindow(cartOverlay);
-          removeModalShade(cartModal);
-        }
-      });
-    }
-
     if (window.location.href.endsWith('catalog.html')) {
       removeNoJs(catalog);
 
@@ -260,7 +221,8 @@
         openModalWindow(filter);
       });
 
-      filterCloseButton.addEventListener('click', () => {
+      filterCloseButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
         closeModalWindow(filter);
       });
     }
@@ -309,16 +271,17 @@
 
         const percent = ((_this.value - min) / (max - min)) * 100;
 
-        thumbRight.style.right = (100 - percent) + '%';
+        thumbRight.style.right = `(100 - ${percent}) + '%'`;
         range.style.right = `(100 - ${percent}) + %`;
         bubbleRight.style.right = `(100 - ${percent}) + %`;
       };
 
       setRightValue();
 
+      // eslint-disable-next-line no-inner-declarations
       function setBubble(range, bubble) {
         const val = range.value;
-        bubble.innerHTML = '&#36;' + val;
+        bubble.innerHTML = `&#36;${  val}`;
       }
 
       setBubble(inputLeft, bubbleLeft);
@@ -335,5 +298,3 @@
     }
   }
 })();
-
-window.addEventListener('focusin', event => console.log(new Date, event.target));

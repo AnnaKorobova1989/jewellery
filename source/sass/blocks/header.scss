@@ -4,6 +4,7 @@
   position: relative;
   width: 100%;
   padding: 43px 0 18px;
+  padding-bottom: 114px;
 
   &::after {
     content: "";
@@ -98,12 +99,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  position: relative;
-  left: 35%;
-  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  transform: translate(-50%, -50%);
   width: fit-content;
   max-width: 78%;
   margin: 91px 0 0;
+  margin-left: 5px;
 }
 
 .header__navigation-item {

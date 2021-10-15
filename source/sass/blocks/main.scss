@@ -37,7 +37,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 463px;
+  min-height: 261px;
   padding: 182px 350px 60px;
 }
 
@@ -51,13 +51,17 @@
 }
 
 .main__heading-text--catalog {
-  min-height: 261px;
+  max-height: 261px;
   padding: 92px 130px 50px;
 }
 
 .main__heading-img--catalog {
   min-height: 261px;
   width: 100%;
+
+  img {
+    min-height: 263px;
+  }
 }
 
 .main__heading-text p,
@@ -105,6 +109,10 @@
 
   .main__heading-text--catalog {
     padding: 92px 60px 40px;
+  }
+
+  .main__heading-img--catalog img {
+    max-height: 263px;
   }
 }
 
